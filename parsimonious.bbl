@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{biscarini2014genome}
+Biscarini, F., Stevanato, P., Broccanello, C., Stella, A., Saccomani, M.:
+  Genome-enabled predictions for binomial traits in sugar beet populations.
+\newblock BMC Genetics \textbf{18}(5), 1--9 (2014)
+
+\bibitem{saccomani2009molecular}
+Saccomani, M., Stevanato, P., Trebbi, D., McGrath, J.M., Biancardi, E.:
+  Molecular and morpho-physiological characterization of sea, ruderal and
+  cultivated beets.
+\newblock Euphytica \textbf{169}(1), 19--29 (2009)
+
+\bibitem{stevanato2013high}
+Stevanato, P., Broccanello, C., Biscarini, F., Del~Corvo, M., Sablok, G.,
+  Panella, L., Stella, A., Concheri, G.: High-throughput rad-snp genotyping for
+  characterization of sugar beet genotypes.
+\newblock Plant Molecular Biology Reporter pp. 1--6 (2013)
+
+\end{thebibliography}

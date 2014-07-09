@@ -1,0 +1,264 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Developing a parsimonius predictor for binary traits in sugar beet %\thanks{Grants or other notes
+%about the article that should go on the front page should be
+%placed here. General acknowledgments should be placed at the end of the article.}
+}
+%\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{Simone Marini         \and
+        Nelson Nazzicari \and
+	Piergiorgio Stevanato \and
+	Filippo Biscarini %etc.
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{F. Biscarini \at
+              Fondazione Parco Tecnologico Padano \\
+              Tel.: +123-45-678910\\
+              \email{filippo.biscarini@tecnoparco.org}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+ \and
+ S. Marini \at
+    second address
+	\and
+	N. Nazzicari \at
+    Fondazione Parco Tecnologico Padano \\
+    Tel.: +123-45-678910\\
+    \email{nelson.nazzicari@tecnoparco.org}           %  \\
+	\and
+	P. Stevanato \at
+	address
+}
+
+\date{Received: 05 August 2014 / Accepted:}
+% The correct dates will be entered by the editor
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Include keywords, PACS and mathematical
+subject classification numbers as needed.
+\keywords{binary trait \and genomic predictions \and parsimonious predictor \and sugar beet}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+\label{intro}
+binary traits in plants and animals: why they are important in practice
+Sugar beets in particular: we work on root vigor.
+The concept of parsimony: when many possible predictors are available, it is
+useful to select a subset to limit analysis cost and time. Moreover: use
+the minimun necessary information set, occam razor, and so forth.
+
+As the technology advances, and available predictors grow, not only the 
+prediction precision becomes important, but also the actual cost must
+be considered.
+
+In this paper we propose statistical methods to highlight and select the 
+most useful predictors given a set. We started on real world data and validated
+our approach on a XXX dataset. We found that it is possible to strongly reduce
+the dimension of the predictors set and still achieve high performance.
+\section{Material and methods}
+\label{sec:1}
+Text with citations \cite{RefB} and \cite{RefJ}.
+\subsection{Plant material and SNP genotypes}
+\label{sec:data}
+Root vigor. Available data. SNP technology used, imputation. \\
+Copypaste from other articles. Dataset description.
+
+\subsection{Developing the parsimonious predictor}
+\label{sec:overview}
+we use a two steps approach:
+- a ranker to rank the various available predictors (SNPs in our case). We
+  used the BOSS algorithm
+- this is an iterative step. we progressively reduced the predictors set, 
+  taking away the laest useful predictor and applying to the resulting
+  subset a ridge logistic regression apprach. Thus, we obtained as many
+  performances estimation as the number of original predictors.
+\paragraph{BOSS}
+\label{par:boss}
+This explain the BOSS algorithm
+
+\paragraph{Selecting predictors and classifying observations}
+\label{par:predictor_selection}
+We take one predictor out at each iteration
+You put the model formula for ridge logistic regression
+
+\paragraph{Estimating the classification error}
+\label{par:estimating_error}
+Cross validation: how many times, what fractions. 
+Explanation of error rate and other parameters (ROC?)
+
+\subsection{Comparison with another ranker}
+\label{sec:other_ranker}
+Another ranker: why use one, and its description.
+P value and SNP effect (as it is done in GWAS)
+
+\subsection{Software}
+\label{sec:software}
+R, weka, perl.
+
+\section{Results}
+\label{sec:results}
+Possible charts:
+- Precision as a function of the number of predictors.
+- Breakdown of two types of error.
+
+If possible: probability of assignment as a function of predictors, maybe
+with ROC curve? Maybe in discussion?
+
+% For one-column wide figures use
+%\begin{figure}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+%  \includegraphics{example.eps}
+% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:1}       % Give a unique label
+%\end{figure}
+
+\section{Discussion}
+\label{sec:discussion}
+General overview
+why error rates are not evenly distributed?
+Reminder: it works very well because of LD and H2
+
+\subsection{Biological meaning of found results}
+Manhattan plot with BOSS weights and weights from the other articles,
+somehow compared (same chart? two charts? only ten best?).
+
+Do the peaks make sense from the biological perspective?
+
+\subsection{Rankers performances}
+why using Pvalues and not other standard rankers (e.g. backward stepwise
+selection)? Because of the specific nature of the problem
+
+\subsection{Genotyping strategies and application to breeding}
+genotyping strategies: 
+Costs, possible technologies (gbs, snp chip, macroarrays), implications
+
+applications to breeding:
+why is it important root vigor early detection. Other binomial traits (e.g.
+disease resistance)
+
+% For two-column wide figures use
+%\begin{figure*}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+%  \includegraphics[width=0.75\textwidth]{example.eps}
+% figure caption is below the figure
+%\caption{Please write your figure caption here}
+%\label{fig:2}       % Give a unique label
+%\end{figure*}
+%
+% For tables use
+%\begin{table}
+% table caption is above the table
+%\caption{Please write your table caption here}
+%\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+%\begin{tabular}{lll}
+%\hline\noalign{\smallskip}
+%first & second & third  \\
+%\noalign{\smallskip}\hline\noalign{\smallskip}
+%number & number & number \\
+%number & number & number \\
+%\noalign{\smallskip}\hline
+%\end{tabular}
+%\end{table}
+
+
+\begin{acknowledgements}
+Do we need to ack somebody?
+\end{acknowledgements}
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+\bibliography{parsimonious.bib}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+%\begin{thebibliography}{}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+%\bibitem{RefJ}
+% Format for Journal Reference
+%Author, Article title, Journal, Volume, page numbers (year)
+% Format for books
+%\bibitem{RefB}
+%Author, Book title, page numbers. Publisher, place (year)
+% etc
+%\end{thebibliography}
+
+\end{document}
+% end of file template.tex
+

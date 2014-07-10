@@ -111,15 +111,35 @@ subject classification numbers as needed.
 
 \section{Introduction}
 \label{intro}
-binary traits in plants and animals: why they are important in practice
-Sugar beets in particular: we work on root vigor \cite{biscarini2014genome}.
+The primary goal of breeding schemes in farm animals and crops is
+generally to increase the agricultural output. Production traits are
+typically quantitative continuous variables (e.g. milk
+yield in dairy cattle, or per hectare yield in maize and rice).
+Many traits of importance in plant and animal breeding follow nonetheless
+a discrete categorical distribution, both ordered (e.g. calving ease in
+cattle, grain texture in rice) and unordered
+(e.g. grain pigmentation in rice, coat colour in cattle). A special case
+is that of binomial traits, which can take up only two different values,
+like disease resistance/susceptibility or presence/absence of a
+morphological characteristic. 
+
+Bolting in sugar beet?
+Root vigor in sugar beet is an example of binomial trait of agronomic
+importance. 
+
+technology $\rightarrow$ molecular breeding \cite{moose2008molecular}
+
+genomic predictions
+
 The concept of parsimony: when many possible predictors are available, it is
 useful to select a subset to limit analysis cost and time. Moreover: use
-the minimun necessary information set, occam razor, and so forth.
+the minimun necessary information set, occam razor (check science paper!), and so forth.
 
 As the technology advances, and available predictors grow, not only the 
 prediction precision becomes important, but also the actual cost must
 be considered.
+
+Sugar beets in particular: we work on root vigor \cite{biscarini2014genome}.
 
 In this paper we propose statistical methods to highlight and select the 
 most useful predictors given a set. We started on real world data and validated
@@ -146,12 +166,12 @@ we use a two steps approach:
 \label{par:boss}
 This explain the BOSS algorithm
 
-\paragraph{Selection of predictors and classification method}
+\subsubsection{Selection of predictors and classification method}
 \label{par:predictor_selection}
 We take one predictor out at each iteration
 You put the model formula for ridge logistic regression
 
-\paragraph{Classification error}
+\subsubsection{Predictive ability}
 \label{par:estimating_error}
 Cross validation: how many times, what fractions. 
 Explanation of error rate and other parameters (ROC?)
@@ -241,6 +261,8 @@ Concluding remarks
 
 \begin{acknowledgements}
 Do we need to ack somebody? (projects?)
+This research was financially supported by the Marie Curie European
+Reintegration Grant ``NEUTRADAPT''.
 \end{acknowledgements}
 
 % BibTeX users please use one of

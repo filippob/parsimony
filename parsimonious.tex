@@ -122,18 +122,28 @@ cattle, grain texture in rice) and unordered
 is that of binomial traits, which can take up only two different values,
 like disease resistance/susceptibility or presence/absence of a
 morphological characteristic. 
+Annual bolting (flowering) behaviour and root vigor are examples of binomial traits of agronomic
+importance in sugar beet (\emph{Beta vulgaris}). 
 
-Bolting in sugar beet?
-Root vigor in sugar beet is an example of binomial trait of agronomic
-importance. 
+Advances in biotechnology and genomics, and the advent of high-density
+molecular markers (especially sinlge-nucleotide polymorphisms, SNP)
+genotyping have led to the emergence of molecular breeding
+\cite{moose2008molecular}.
 
-technology $\rightarrow$ molecular breeding \cite{moose2008molecular}
-
-genomic predictions
+One exciting application of molecular breeding are genomic predictions
+(\cite{meuwissen2001prediction}): something on genomic predictions in
+general. Genomic predictions in sugar beet already done both for
+continuous (\cite{hofheinz2012genome,wurschum2013genomic}) and binary
+(\cite{biscarini2014genome}) traits.
 
 The concept of parsimony: when many possible predictors are available, it is
 useful to select a subset to limit analysis cost and time. Moreover: use
-the minimun necessary information set, occam razor (check science paper!), and so forth.
+the minimun necessary information set, occam razor (\cite{chaitin2006limits}), and so forth.
+
+A model need to be simpler than the data the it fits/explains (e.g. knn with k=1)
+
+Given two models that fit the data, the simplest has to be chosen (Occam's razor)
+
 
 As the technology advances, and available predictors grow, not only the 
 prediction precision becomes important, but also the actual cost must
@@ -145,17 +155,21 @@ In this paper we propose statistical methods to highlight and select the
 most useful predictors given a set. We started on real world data and validated
 our approach on a XXX dataset. We found that it is possible to strongly reduce
 the dimension of the predictors set and still achieve high performance.
+
 \section{Material and methods}
 \label{sec:1}
-Text with citations \cite{stevanato2013high} and \cite{saccomani2009molecular}.
 \subsection{Plant material and SNP genotypes}
 \label{sec:data}
 Root vigor. Available data. SNP technology used, imputation. \\
 Copypaste from other articles. Dataset description.
+Text with citations \cite{stevanato2013high} and
+\cite{saccomani2009molecular}.
 
 \subsection{Predictor development procedure}
 \label{sec:overview}
-we use a two steps approach:
+A two-step approach was adopted for the construction of a parsimonious
+predictor for root vigor.
+
 - a ranker to rank the various available predictors (SNPs in our case). We
   used the BOSS algorithm
 - this is an iterative step. we progressively reduced the predictors set, 
@@ -226,7 +240,12 @@ Costs, possible technologies (gbs, snp chip, macroarrays), implications
 
 applications to breeding:
 why is it important root vigor early detection. Other binomial traits (e.g.
-disease resistance)
+disease resistance) May be applied to bolting (another trait which
+exhibits binomial distribution), which has been shown to be controlled
+by multiple genes and influenced by environmental factors
+(\cite{salah2012genetic}).
+
+Extensions to multinomial traits? Examples?
 
 % For two-column wide figures use
 %\begin{figure*}

@@ -132,14 +132,15 @@ genotyping have led to the emergence of molecular breeding
 
 One exciting application of molecular breeding are genomic predictions
 (\cite{meuwissen2001prediction}): something on genomic predictions in
-general. Genomic predictions in sugar beet already done both for
-continuous (\cite{hofheinz2012genome,wurschum2013genomic}) and binary
+general. The recent publication of the reference genome for \emph{Beta
+vulgaris} genome \cite{dohm2013genome} facilitated molecular breeding
+also in this crop species. Genomic predictions in sugar beet already
+done both for continuous (\cite{hofheinz2012genome,wurschum2013genomic}) and binary
 (\cite{biscarini2014genome}) traits.
 
 The concept of parsimony: when many possible predictors are available, it is
 useful to select a subset to limit analysis cost and time. Moreover: use
 the minimun necessary information set, occam razor (\cite{chaitin2006limits}), and so forth.
-
 A model need to be simpler than the data the it fits/explains (e.g. knn with k=1)
 
 Given two models that fit the data, the simplest has to be chosen (Occam's razor)
@@ -195,6 +196,8 @@ Explanation of error rate and other parameters (ROC?)
 Another ranker: why use one, and its description.
 P value and SNP effect (as it is done in GWAS)
 
+SNP variance \cite{gianola2009additive}
+
 \subsection{Software}
 \label{sec:software}
 R, weka, perl.
@@ -207,6 +210,8 @@ Possible charts:
 
 If possible: probability of assignment as a function of predictors, maybe
 with ROC curve? Maybe in discussion?
+
+Something on the ranking of predictors (variable importance vs SNP effects)?
 
 % For one-column wide figures use
 %\begin{figure}
@@ -244,6 +249,17 @@ disease resistance) May be applied to bolting (another trait which
 exhibits binomial distribution), which has been shown to be controlled
 by multiple genes and influenced by environmental factors
 (\cite{salah2012genetic}).
+
+sugar beet: $30\%$ of world's sugar production (cite Dohm? FAO?). Root
+vigor linked to yield.
+
+Sugar beet: sugar + energy (citation?)
+
+Other binomial traits: resistance to viral and fungal diseases, bolting
+(cite Dohm? Someone else?)
+
+Breeding has shaped the genome of sugar beet (comparison with \emph{Beta
+  maritima}, \cite{dohm2013genome}).
 
 Extensions to multinomial traits? Examples?
 

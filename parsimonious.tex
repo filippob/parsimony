@@ -179,7 +179,7 @@ predictor for root vigor.
   performances estimation as the number of original predictors.
 \subsubsection{Rank of predictors}
 \label{par:boss}
-This explain the BOSS algorithm
+This explain the BOSS algorithm \cite{russu2012stochastic}
 
 \subsubsection{Selection of predictors and classification method}
 \label{par:predictor_selection}
@@ -211,7 +211,11 @@ Possible charts:
 If possible: probability of assignment as a function of predictors, maybe
 with ROC curve? Maybe in discussion?
 
+Plot AUC vs \# predictors?
+
 Something on the ranking of predictors (variable importance vs SNP effects)?
+
+Plot coefficients from BOSS?
 
 % For one-column wide figures use
 %\begin{figure}
@@ -234,6 +238,15 @@ Manhattan plot with BOSS weights and weights from the other articles,
 somehow compared (same chart? two charts? only ten best?).
 
 Do the peaks make sense from the biological perspective?
+
+Variance of SNPs vs genetic variance: $\rightarrow$ missing
+heritability? (cite Brachi 2011, Manolio 2009?).
+
+BOSS probability: 1 big peak + smaller peaks. Compare against SNP
+density? Maybe the big peak corresponds to a physically isolated SNP,
+whereas smaller peaks correspond to a cluster of SNPs in LD which
+individually account for a smaller part of the variatino, but together
+play an important predictive role. 
 
 \subsection{Relative performance of rankers}
 why using Pvalues and not other standard rankers (e.g. backward stepwise

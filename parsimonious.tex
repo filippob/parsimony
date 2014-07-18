@@ -204,18 +204,22 @@ R, weka, perl.
 
 \section{Results}
 \label{sec:results}
-Possible charts:
-- Precision as a function of the number of predictors.
-- Breakdown of two types of error.
+
+Figure 1: Accuracy as a function of the number of predictors, BOSS vs GWAS
+
+Table 1(2?): TER, FPR, FNR for the first 30/35 SNPs + average for the
+rest of the SNP (error close to $0$). BOSS + GWAS (6 columns)
+
+Comparison of rankers: spearman correlation + plot (ranker1 vs ranker2).
 
 If possible: probability of assignment as a function of predictors, maybe
-with ROC curve? Maybe in discussion?
+with ROC curve? Maybe in discussion? Wait for results to be ready
 
-Plot AUC vs \# predictors?
+Plot AUC vs \# predictors? No, use AUC as result in the text (e.g.
+comparison between ranker: overall average AUC, average AUC per \# SNPs
++ std)
 
-Something on the ranking of predictors (variable importance vs SNP effects)?
-
-Plot coefficients from BOSS?
+SNP effects
 
 % For one-column wide figures use
 %\begin{figure}
@@ -232,6 +236,16 @@ Plot coefficients from BOSS?
 General overview
 why error rates are not evenly distributed?
 Reminder: it works very well because of LD and H2
+
+Unstable below 30/40 SNPs; little ``bump'' around 20 SNPs: more marked
+with BOSS, but also visible with GWAS. Why there? SNPs with large effect
+on the trait, but low significance? SNPs with large effect but low LD
+(with the QTL)? In the latter case, the marker might sometimes be in the
+opposite phase
+
+Based on results, a panel of 30-35-40 SNPs is recommended for accurate
+prediction of root vigor (move to breeding applications? Together with
+development of a custom-chip?)
 
 \subsection{SNP effects}
 Manhattan plot with BOSS weights and weights from the other articles,

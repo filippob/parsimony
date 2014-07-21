@@ -205,31 +205,41 @@ R, weka, perl.
 \section{Results}
 \label{sec:results}
 
-Figure 1: Accuracy as a function of the number of predictors, BOSS vs GWAS
+Figure~\ref{fig:accuracy}: Accuracy as a function of the number of
+predictors, BOSS vs logistic [improve plot: no need to go down to 0.0 in
+the y-axis; legend names and position; color of the lines? The ``bump''
+at around 20-30 SNPs is not visible]
 
-Table 1(2?): TER, FPR, FNR for the first 30/35 SNPs + average for the
+Table~\ref{tab:error}: TER, FPR, FNR for the first 30/35 SNPs + average for the
 rest of the SNP (error close to $0$). BOSS + GWAS (6 columns)
 
-Comparison of rankers: spearman correlation + plot (ranker1 vs ranker2).
 
-If possible: probability of assignment as a function of predictors, maybe
-with ROC curve? Maybe in discussion? Wait for results to be ready
+Probability of assignment as a function of predictors:
+Figure~\ref{fig:probability}. Better a table? Maybe in discussion?
 
-Plot AUC vs \# predictors? No, use AUC as result in the text (e.g.
+From ROC curves only the AUC. No plot, use AUC as result in the text (e.g.
 comparison between ranker: overall average AUC, average AUC per \# SNPs
-+ std)
-
-SNP effects
++ std). Table?
 
 % For one-column wide figures use
-%\begin{figure}
+\begin{figure}
 % Use the relevant command to insert your figure file.
 % For example, with the graphicx package use
-%  \includegraphics{example.eps}
+\includegraphics[width=0.95\textwidth]{accuracy.png}
 % figure caption is below the figure
-%\caption{Please write your figure caption here}
-%\label{fig:1}       % Give a unique label
-%\end{figure}
+\caption{Accuracy (1 - error rate) of prediction as a function of the
+  number of SNPs included in the classifier: BOSS (blue line) vs
+  logistic regression (red line)}
+\label{fig:accuracy}       % Give a unique label
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{prob_roll3.pdf}
+\caption{Distribution of $P(Y=1|x)$ as a function of the number of SNPs
+  in the classifier}
+\label{fig:probability} 
+\end{figure}
+
 
 \section{Discussion}
 \label{sec:discussion}
@@ -241,7 +251,7 @@ Unstable below 30/40 SNPs; little ``bump'' around 20 SNPs: more marked
 with BOSS, but also visible with GWAS. Why there? SNPs with large effect
 on the trait, but low significance? SNPs with large effect but low LD
 (with the QTL)? In the latter case, the marker might sometimes be in the
-opposite phase
+opposite phase. Look also at marker frequency.
 
 Based on results, a panel of 30-35-40 SNPs is recommended for accurate
 prediction of root vigor (move to breeding applications? Together with
@@ -265,6 +275,18 @@ play an important predictive role.
 \subsection{Relative performance of rankers}
 why using Pvalues and not other standard rankers (e.g. backward stepwise
 selection)? Because of the specific nature of the problem
+
+Comparison of rankers: spearman correlation + plot (ranker1 vs ranker2).
+
+Figure~\ref{fig:rank}
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{rank.pdf}
+\caption{Comparison of BOSS and logistic regression in terms of relative
+rank position of relevant SNPs}
+\label{fig:rank} 
+\end{figure}
+
 
 \subsection{Genotyping strategies and applications to breeding}
 genotyping strategies: 
@@ -300,32 +322,61 @@ Extensions to multinomial traits? Examples?
 %\label{fig:2}       % Give a unique label
 %\end{figure*}
 %
-% For tables use
-%\begin{table}
-% table caption is above the table
-%\caption{Please write your table caption here}
-%\label{tab:1}       % Give a unique label
-% For LaTeX tables use
-%\begin{tabular}{lll}
-%\hline\noalign{\smallskip}
-%first & second & third  \\
-%\noalign{\smallskip}\hline\noalign{\smallskip}
-%number & number & number \\
-%number & number & number \\
-%\noalign{\smallskip}\hline
-%\end{tabular}
-%\end{table}
 
 \section{Conclusions}
 \label{sec:conclusions}
 
-Concluding remarks
+Concluding remarks. 
+
 
 \begin{acknowledgements}
-Do we need to ack somebody? (projects?)
 This research was financially supported by the Marie Curie European
 Reintegration Grant ``NEUTRADAPT''.
 \end{acknowledgements}
+
+%\section{Tables}
+
+% For tables use
+\begin{table}
+% table caption is above the table
+\caption{Total error rate (TER), false positive (FPR) and false negative
+  (FNR) rates as a function of the number of SNPs ranked according to
+  BOSS or logistic regression}
+\label{tab:error}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{cccc}
+\hline\noalign{\smallskip}
+\# SNPs & TER & FPR & FNR \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+1 & 0.114 & 0.065 & 0.049 \\
+2 & 0.085 & 0.037 & 0.047 \\
+3 & 0.008 &  &  \\
+4 & 0.005 &  &  \\
+5 & 0.003 &  &  \\
+6 & 0.005 &  &  \\
+7 & 0.003 &  &  \\
+8 & 0.002 &  &  \\
+9 & 0.003 &  &  \\
+10 & 0.002 &  &  \\
+11 & 0.002 &  &  \\
+12 & 0.008 &  &  \\
+13 & 0.009 &  &  \\
+14 & 0.016 &  &  \\
+15 & 0.012 &  &  \\
+16 & 0.007 &  &  \\
+17 & 0.005 &  &  \\
+18 & 0.004 &  &  \\
+19 & 0.002 &  &  \\
+20 & 0.001 &  &  \\
+\dots & \dots &  \dots &  \dots \\
+21--30 & 0.002  &  &  \\
+31--40 & 0.001 &  &  \\
+41--100 & 0.003 &  &  \\
+101--175 & 0.001 &  &  \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
 
 % BibTeX users please use one of
 %\bibliographystyle{spbasic}      % basic style, author-year citations

@@ -4,7 +4,6 @@
      "parsimonious.bib")
     (LaTeX-add-labels
      "intro"
-     "sec:1"
      "sec:data"
      "sec:overview"
      "par:boss"
@@ -13,8 +12,12 @@
      "sec:other_ranker"
      "sec:software"
      "sec:results"
+     "fig:accuracy"
+     "fig:probability"
      "sec:discussion"
-     "sec:conclusions")
+     "fig:rank"
+     "sec:conclusions"
+     "tab:error")
     (TeX-run-style-hooks
      "graphicx"
      "latex2e"

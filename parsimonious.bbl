@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -6,10 +6,80 @@
   \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
+\bibitem{salah2012genetic}
+Abou-Elwafa, S., B\"{u}ttner, B., Kopisch-Obuch, F., Jung, C., M\"{u}ller, A.:
+  Genetic identification of a novel bolting locus in \emph{Beta vulgaris} which
+  promotes annuality independently of the bolting gene \emph{B}.
+\newblock Molecular Breeding \textbf{29}, 989--998 (2012)
+
 \bibitem{biscarini2014genome}
 Biscarini, F., Stevanato, P., Broccanello, C., Stella, A., Saccomani, M.:
   Genome-enabled predictions for binomial traits in sugar beet populations.
 \newblock BMC Genetics \textbf{18}(5), 1--9 (2014)
+
+\bibitem{chaitin2006limits}
+Chaitin, G.: The limits of reason.
+\newblock Scientific American \textbf{294}(3), 74--81 (2006)
+
+\bibitem{dohm2013genome}
+Dohm, J.C., Minoche, A.E., Holtgr{\"a}we, D., Capella-Guti{\'e}rrez, S.,
+  Zakrzewski, F., Tafer, H., Rupp, O., S{\"o}rensen, T.R., Stracke, R.,
+  Reinhardt, R., et~al.: The genome of the recently domesticated crop plant
+  sugar beet (beta vulgaris).
+\newblock Nature  (2013)
+
+\bibitem{gianola2009additive}
+Gianola, D., de~Los~Campos, G., Hill, W.G., Manfredi, E., Fernando, R.:
+  Additive genetic variability and the bayesian alphabet.
+\newblock Genetics \textbf{183}(1), 347--363 (2009)
+
+\bibitem{goddard2007genomic}
+Goddard, M., Hayes, B.: Genomic selection.
+\newblock Journal of Animal Breeding and Genetics \textbf{124}(6), 323--330
+  (2007)
+
+\bibitem{hall2009weka}
+Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., Witten, I.H.:
+  The weka data mining software: an update.
+\newblock ACM SIGKDD explorations newsletter \textbf{11}(1), 10--18 (2009)
+
+\bibitem{heffner2010plant}
+Heffner, E.L., Lorenz, A.J., Jannink, J.L., Sorrells, M.E.: Plant breeding with
+  genomic selection: gain per unit time and cost.
+\newblock Crop science \textbf{50}(5), 1681--1690 (2010)
+
+\bibitem{hofheinz2012genome}
+Hofheinz, N., Borchardt, D., Weissleder, K., Frisch, M.: Genome-based
+  prediction of test cross performance in two subsequent breeding cycles.
+\newblock Theoretical and Applied Genetics \textbf{125}(8), 1639--1645 (2012)
+
+\bibitem{jonas2013does}
+Jonas, E., de~Koning, D.J.: Does genomic selection have a future in plant
+  breeding?
+\newblock Trends in biotechnology \textbf{31}(9), 497--504 (2013)
+
+\bibitem{meuwissen2001prediction}
+Meuwissen, T., Hayes, B., Goddard: Prediction of total genetic value using
+  genome-wide dense marker maps.
+\newblock Genetics \textbf{157}(4), 1819--1829 (2001)
+
+\bibitem{moose2008molecular}
+Moose, S.P., Mumm, R.H.: Molecular plant breeding as the foundation for 21st
+  century crop improvement.
+\newblock Plant physiology \textbf{147}(3), 969--977 (2008)
+
+\bibitem{r2008manual}
+{R Development Core Team}: R: A Language and Environment for Statistical
+  Computing.
+\newblock R Foundation for Statistical Computing, Vienna, Austria (2008).
+\newblock \urlprefix\url{http://www.R-project.org}.
+\newblock {ISBN} 3-900051-07-0
+
+\bibitem{russu2012stochastic}
+Russu, A., Malovini, A., Puca, A.A., Bellazzi, R.: Stochastic model search with
+  binary outcomes for genome-wide association studies.
+\newblock Journal of the American Medical Informatics Association
+  \textbf{19}(e1), e13--e20 (2012)
 
 \bibitem{saccomani2009molecular}
 Saccomani, M., Stevanato, P., Trebbi, D., McGrath, J.M., Biancardi, E.:
@@ -22,5 +92,15 @@ Stevanato, P., Broccanello, C., Biscarini, F., Del~Corvo, M., Sablok, G.,
   Panella, L., Stella, A., Concheri, G.: High-throughput rad-snp genotyping for
   characterization of sugar beet genotypes.
 \newblock Plant Molecular Biology Reporter pp. 1--6 (2013)
+
+\bibitem{stevanato2010root}
+Stevanato, P., Trebbi, D., Saccomani, M.: Root traits and yield in sugar beet:
+  identification of aflp markers associated with root elongation rate.
+\newblock Euphytica \textbf{173}(3), 289--298 (2010)
+
+\bibitem{wurschum2013genomic}
+W{\"u}rschum, T., Reif, J.C., Kraft, T., Janssen, G., Zhao, Y.: Genomic
+  selection in sugar beet breeding populations.
+\newblock BMC genetics \textbf{14}(1), 85 (2013)
 
 \end{thebibliography}

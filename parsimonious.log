@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  9 JUL 2014 19:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  23 JUL 2014 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -195,36 +195,62 @@ e
 ))
 SVJour3 warning: Missing \journalname
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 102.
+(Font)              <7> on input line 104.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 102.
+(Font)              <5> on input line 104.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 102.
+(Font)              <8> on input line 104.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 102.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./parsimonious.bbl
-[3]) [4] (./parsimonious.aux) ) 
+(Font)              <6> on input line 104.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<accuracy.pdf, id=21, 524.71031pt x 231.11343pt>
+File: accuracy.pdf Graphic file (type pdf)
+ <use accuracy.pdf>
+Package pdftex.def Info: accuracy.pdf used on input line 283.
+(pdftex.def)             Requested size: 321.09897pt x 141.4339pt.
+
+<prob_roll3.pdf, id=22, 496.85625pt x 346.29375pt>
+File: prob_roll3.pdf Graphic file (type pdf)
+ <use prob_roll3.pdf>
+Package pdftex.def Info: prob_roll3.pdf used on input line 292.
+(pdftex.def)             Requested size: 321.09897pt x 223.79897pt.
+
+[4 <./accuracy.pdf>] <rank.pdf, id=36, 743.02594pt x 256.70906pt>
+File: rank.pdf Graphic file (type pdf)
+
+<use rank.pdf>
+Package pdftex.def Info: rank.pdf used on input line 324.
+(pdftex.def)             Requested size: 321.09897pt x 110.93895pt.
+
+Underfull \vbox (badness 3815) has occurred while \output is active []
+
+ [5 <./prob_roll3.pdf>] [6 <./rank.pdf>] (./parsimonious.bbl [7]) [8] (./parsim
+onious.aux) ) 
 Here is how much of TeX's memory you used:
- 2202 strings out of 494277
- 32913 string characters out of 6159531
- 85155 words of memory out of 5000000
- 5477 multiletter control sequences out of 15000+600000
- 9839 words of font info for 34 fonts, out of 8000000 for 9000
+ 2245 strings out of 494277
+ 33552 string characters out of 6159531
+ 89240 words of memory out of 5000000
+ 5516 multiletter control sequences out of 15000+600000
+ 10191 words of font info for 35 fonts, out of 8000000 for 9000
  400 hyphenation exceptions out of 8191
- 37i,7n,23p,247b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on parsimonious.pdf (4 pages, 119704 bytes).
+ 37i,8n,23p,282b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbs
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti8.pfb>
+Output written on parsimonious.pdf (8 pages, 202686 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

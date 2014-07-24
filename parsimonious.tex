@@ -216,7 +216,24 @@ In the second his is an iterative step. we progressively reduced the predictors 
   performances estimation as the number of original predictors.
 \subsubsection{Rank of predictors}
 \label{par:boss}
-This explain the BOSS algorithm \cite{russu2012stochastic}
+The first step in our approach is to rank the SNPs by their informativeness
+on the studied phenotype trait. To do so we used one of the outputs of
+the BOSS algorithm \cite{russu2012stochastic}. This algorithm is designed
+to target binary traits, and performs a 
+a model search by sampling the predictors on the
+basis of a general and efficient Markov Chain
+Monte Carlo (MCMC) technique that exploits the
+conjugacy structure of data and parameters.
+
+The relationship between the observed
+responses and the available predictors is described
+by a latent variable model with a probit link. Prior 
+distributions are assigned both to
+the regression coefficients and the model size,
+therefore allowing the user to specify a prior
+belief on the model complexity. 
+
+The algorithm produces a XXX
 
 \subsubsection{Selection of predictors and classification method}
 \label{par:predictor_selection}

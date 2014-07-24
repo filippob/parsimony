@@ -224,11 +224,10 @@ Text with citations \cite{stevanato2013high} and
 \subsection{Predictor development procedure}
 \label{sec:overview}
 A two-step approach was adopted for the construction of a parsimonious
-predictor for root vigor.
-
-- a ranker to rank the various available predictors (SNPs in our case). We
-  used the BOSS algorithm
-- this is an iterative step. we progressively reduced the predictors set, 
+predictor for root vigor in sugar beet.
+First, the 175 SNP available for the analysis were ranked based on their
+importance/relevance for predicting the trait under study.
+In the second his is an iterative step. we progressively reduced the predictors set, 
   taking away the laest useful predictor and applying to the resulting
   subset a ridge logistic regression apprach. Thus, we obtained as many
   performances estimation as the number of original predictors.

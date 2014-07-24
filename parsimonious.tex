@@ -174,52 +174,35 @@ predictor and still achieve high accuracy.
 
 \subsection{Plant material and SNP genotypes}
 \label{sec:data}
-A population of 124 individual sugar beet (\emph{B. vulgaris}) plants
-from 18 high- and low-root-vigor lines were available. These lines were
-characterised by different productivity and were provided by Lion Seeds
-Ltd. (UK). Root vigor is related to nutrient uptake from the soil and plant productivity
-(\cite{stevanato2010root}), and is recorded as a binary trait (either
-high or low). The lines	were phenotyped	by measuring the root
-elongation rate of eleven-days-old seedlings grown under hydroponic
-conditions. There was no predetermined root
-elongation rate threshold to classify a sugar beet as having high or low
-root vigour, and the decision was subjectively made upon phenotypic
-inspection. The classification has nevertheless been shown to be robust:
-seedlings classified as "low" or "high" maintain the same class also at the
-adult plant stage (\cite{stevanato2010root}). 
-There were three low-root-vigor (24 individuals)
-and 15 high-root-vigor (100 individuals) lines. Root elongation rate was
-$< 3$ mm/day in the low-root-vigor lines and $>6$ mm/day in the
-high-root-vigor lines.
+The available population comprised 123 individual sugar beet (\emph{B. vulgaris})
+plants, 100 with high- and 24 with low-root vigor. Root vigor is related
+to nutrient uptake from the soil and plant productivity
+(\cite{stevanato2010root}) and is recorded as a binary trait (either
+high or low) based on the root elongation
+rate of eleven-days-old seedlings. No predetermined root
+elongation rate threshold was used to classify sugar beets into high or low
+root vigour. The classification was subjectively made upon phenotypic
+inspection and has nevertheless been shown to be robust over time (\cite{stevanato2010root}). 
+The plant material was provided by Lion Seeds Ltd. (UK).
 
-All individual plants were genotyped for 192 SNP markers with the
+All plants were genotyped for 192 SNP markers with the
 high-throughput marker array QuantStudio 12K Flex system
 coupled with Taqman OpenArray technology. Additional details on the
 genotyping procedure are described in Stevanato et al., 2013 (\cite{stevanato2013high}).
 
-The initial genotype screening led to the detection of one duplicated
-individual ($100\%$ matching genotypes) from a high-root-vigor line,
-which was removed. The average per-sample
-and per-marker call-rate was $0.984$ and $0.969$. Only one SNP had a
-per-marker call-rate $\leq 85\%$ and was removed from the analysis.
 % There were in total 738  missing
 % genotypes ($3.14\%$). Missing genotypes were imputed based on
 % linkage disequilibrium (LD, \cite{browning2007rapid}).
-After imputation data were edited for
-minor allele frequency (MAF): 16 SNPs with MAF $\leq 2.5\%$ were
-discarded. This left a total of 123 individuals and 175 SNP markers for
-the analysis.
-An overview of the data used in the paper is given in
+After imputation and editing (call-rate $\geq 95\%$, MAF $\leq 2.5\%$)
+175 SNPs were left for the analysis. A more detailed description of SNP
+genotypes and editing procedure can be found in Biscarini et al. (\cite{biscarini2014genome}).
 % Table~\ref{tab:overview}. Table~\ref{tab:chromosome} reports the
 % distribution of the 175 SNPs (and related scaffolds) used in the
 % analysis along the 9 chromosomes of the \emph{Beta
 %   vulgaris} genome. The average scaffold size was $1037$ kbps
 % (range: $34.5$ - $4957$ kbps). 
 
-Root vigor. Available data. SNP technology used, imputation. \\
-Copypaste from other articles. Dataset description.
-Text with citations \cite{stevanato2013high} and
-\cite{saccomani2009molecular}.
+\cite{stevanato2013high} and \cite{saccomani2009molecular}.
 
 \subsection{Predictor development procedure}
 \label{sec:overview}

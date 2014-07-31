@@ -219,11 +219,68 @@ sparse linear models based on regularization
 
 naive-Bayes techniques
 
-Bayesian model selection: unlike regularization, this is a model search
+Bayesian model selection for binary outcomes: unlike regularization, this is a model search
 through the sampling of predictors with MCMC algorithm that builds upon
 the conjugacy structure of data and parameters.
 
+BOSS: Bayesian stochastic model search for binary outcomes. The
+relationships between binary observed responses and predictors is
+described by a altent variable model with a probit link. Prior distributions assigned
+to regression coefficients and model size, to specify prior belief on
+model complexity.
+Metropolis-Hastings sampling algorithm (check the Theory that would not die). 
+BOSS extensively explores the model space to identify relevant
+predictors (sort of best model selection).
+
+$Y_i$: vector of $i=1 ... n$ observations; independent Bernoulli trials
+with success probability $\pi_i$. $x_i=(x_{i1}, \ldots, x_{ip})$ vector
+of $p$ predictors associated with response $Y_i$. $\beta$: vector of
+regression coefficients (parameters).
+
+Probit link function $g$:
+
+\begin{equation}
+\pi_{i}=\phi(x_i^T \beta) = \int_{-\infty}^{x_i^T \beta}N(0,1)\mathrm{d}u
+\end{equation} 
+  
+$\beta$ is assigned a multivariate Gaussian prior.
+
+$Z$: latent variables ($Z \sim N(X^T\beta)$).
+The threshold (latent variable) model is summarized in equation~\ref{eq:threshold}
+
+\begin{equation}
+Y_i = \left\{ 
+\begin{array}{ll}
+0 \quad Z_i \leq 0 \\
+1 \quad Z_i > 0
+\end{array}
+\right.
+\quad \mathbf{Z}=\mathbf{X\beta+\epsilon}
+\label{eq:threshold}
+\end{equation}
  
+Posteriors for $\beta$ through Gibbs sampling (again, see the Theory
+that would not die).
+
+$\gamma=(\gamma_1, \ldots, \gamma_p)$: vector of indicator variables
+($\gamma=0$ if $\beta=0$, $\gamma=1$ if $\beta \neq 0$)
+
+Equation~\ref{eq:threshold} can be re-written as
+$\mathbf{Z=\alpha1+X_{\gamma}\beta_{\gamma}+\epsilon}$ and includes only
+predictors for which $\gamma=1$ ($\alpha$ is the intercept).
+
+
+$\gamma$ obtained through Binary Outcome Stochastic Search (BOSS): a
+sampling scheme from $f(\gamma|Z)$.
+
+\begin{enumerate}
+\item initialize $Z$
+\item sample prior for $\gamma$
+\item sample $f(\beta_{\gamma}|\gamma,\sigma^2)$
+\item sample $f(Z|Y,\beta_{\gamma})$
+\item restart from 2 until $m$ iterations are completed
+\end{enumerate}
+
 The first step in our approach is to rank the SNPs by their informativeness
 on the studied phenotype trait. To do so we used one of the outputs of
 the BOSS algorithm \cite{russu2012stochastic}. This algorithm is designed

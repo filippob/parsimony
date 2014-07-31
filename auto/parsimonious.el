@@ -7,6 +7,7 @@
      "sec:data"
      "sec:overview"
      "par:boss"
+     "eq:threshold"
      "par:predictor_selection"
      "par:estimating_error"
      "sec:other_ranker"

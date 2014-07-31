@@ -15,6 +15,7 @@
      "fig:accuracy"
      "fig:probability"
      "sec:discussion"
+     "fig:ld"
      "fig:rank"
      "sec:conclusions"
      "tab:error")

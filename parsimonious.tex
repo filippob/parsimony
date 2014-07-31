@@ -189,7 +189,6 @@ All plants were genotyped for 192 SNP markers with the
 high-throughput marker array QuantStudio 12K Flex system
 coupled with Taqman OpenArray technology. Additional details on the
 genotyping procedure are described in Stevanato et al., 2013 (\cite{stevanato2013high}).
-
 % There were in total 738  missing
 % genotypes ($3.14\%$). Missing genotypes were imputed based on
 % linkage disequilibrium (LD, \cite{browning2007rapid}).
@@ -200,22 +199,31 @@ genotypes and editing procedure can be found in Biscarini et al. (\cite{biscarin
 % distribution of the 175 SNPs (and related scaffolds) used in the
 % analysis along the 9 chromosomes of the \emph{Beta
 %   vulgaris} genome. The average scaffold size was $1037$ kbps
-% (range: $34.5$ - $4957$ kbps). 
-
-\cite{stevanato2013high} and \cite{saccomani2009molecular}.
+% (range: $34.5$ - $4957$ kbps).
 
 \subsection{Predictor development procedure}
 \label{sec:overview}
 A two-step approach was adopted for the construction of a parsimonious
 predictor for root vigor in sugar beet.
-First, the 175 SNP available for the analysis were ranked based on their
-importance/relevance for predicting the trait under study.
-In the second his is an iterative step. we progressively reduced the predictors set, 
-  taking away the laest useful predictor and applying to the resulting
-  subset a ridge logistic regression apprach. Thus, we obtained as many
-  performances estimation as the number of original predictors.
+First, the 175 SNP available for the analysis after data editing were ranked based on their
+relevance for predicting the trait under study.
+In the second step the set of predictors was progressively reduced by
+removing the laest useful predictor one at a time. At each iteration
+logistic regression was used to classify observations with the given set
+of SNPs. 
+Therefore, as many classification results as the number of SNPs (i.e. 175) were obtained.
+
 \subsubsection{Rank of predictors}
 \label{par:boss}
+sparse linear models based on regularization
+
+naive-Bayes techniques
+
+Bayesian model selection: unlike regularization, this is a model search
+through the sampling of predictors with MCMC algorithm that builds upon
+the conjugacy structure of data and parameters.
+
+ 
 The first step in our approach is to rank the SNPs by their informativeness
 on the studied phenotype trait. To do so we used one of the outputs of
 the BOSS algorithm \cite{russu2012stochastic}. This algorithm is designed

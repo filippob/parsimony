@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  31 JUL 2014 20:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  1 AUG 2014 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -203,63 +203,62 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 104.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-<accuracy.pdf, id=29, 785.93625pt x 287.57437pt>
+<accuracy.pdf, id=27, 785.93625pt x 287.57437pt>
 File: accuracy.pdf Graphic file (type pdf)
  <use accuracy.pdf>
-Package pdftex.def Info: accuracy.pdf used on input line 350.
+Package pdftex.def Info: accuracy.pdf used on input line 370.
 (pdftex.def)             Requested size: 321.09897pt x 117.49377pt.
 
-<probabilities.pdf, id=30, 794.97pt x 614.295pt>
+<probabilities.pdf, id=28, 794.97pt x 614.295pt>
 File: probabilities.pdf Graphic file (type pdf)
  <use probabilities.pdf>
-Package pdftex.def Info: probabilities.pdf used on input line 359.
+Package pdftex.def Info: probabilities.pdf used on input line 379.
 (pdftex.def)             Requested size: 321.09897pt x 248.12259pt.
 
-[5 <./accuracy.pdf>] <LD.pdf, id=44, 794.97pt x 614.295pt>
+<LD.pdf, id=29, 794.97pt x 614.295pt>
 File: LD.pdf Graphic file (type pdf)
  <use LD.pdf>
-Package pdftex.def Info: LD.pdf used on input line 383.
+Package pdftex.def Info: LD.pdf used on input line 403.
 (pdftex.def)             Requested size: 321.09897pt x 248.12259pt.
-
-<rank.pdf, id=45, 785.93625pt x 287.57437pt>
+ [5]
+<rank.pdf, id=33, 785.93625pt x 287.57437pt>
 File: rank.pdf Graphic file (type pdf)
  <use rank.pdf>
-Package pdftex.def Info: rank.pdf used on input line 398.
+Package pdftex.def Info: rank.pdf used on input line 418.
 (pdftex.def)             Requested size: 321.09897pt x 117.49377pt.
- [6 <./probabilities.pdf>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./LD.pdf> <./rank.pdf>] (./parsimonious.bbl [8] [9]) [10] (./parsimonious.
-aux) ) 
+ [6 <./accuracy.pdf> <./probabilities.pdf>] [7 <./LD.pdf> <./rank.pdf>]
+(./parsimonious.bbl [8] [9]) [10] (./parsimonious.aux) ) 
 Here is how much of TeX's memory you used:
- 2253 strings out of 494277
- 33641 string characters out of 6159531
- 92256 words of memory out of 5000000
- 5522 multiletter control sequences out of 15000+600000
+ 2254 strings out of 494277
+ 33652 string characters out of 6159531
+ 92265 words of memory out of 5000000
+ 5523 multiletter control sequences out of 15000+600000
  10503 words of font info for 36 fonts, out of 8000000 for 9000
  400 hyphenation exceptions out of 8191
- 37i,8n,23p,282b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on parsimonious.pdf (10 pages, 267676 bytes).
+ 37i,8n,23p,282b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti8.pfb>
+Output written on parsimonious.pdf (10 pages, 251221 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 139 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -208,42 +208,73 @@ predictor for root vigor in sugar beet.
 First, the 175 SNP available for the analysis after data editing were ranked based on their
 relevance for predicting the trait under study.
 In the second step the set of predictors was progressively reduced by
-removing the laest useful predictor one at a time. At each iteration
+removing the least useful predictors one at a time. At each iteration
 logistic regression was used to classify observations with the given set
 of SNPs. 
-Therefore, as many classification results as the number of SNPs (i.e. 175) were obtained.
+As many classification results as the number of SNPs (i.e. 175) were
+therefore obtained.
 
 \subsubsection{Rank of predictors}
 \label{par:boss}
-sparse linear models based on regularization
+When many predictors are availble -especially if $p>n$- it may be
+of interest to reduce the dimensionality of the problem by choosing the
+optimal subset of predictors that best describe the relationship between
+dependent and independent variables [or that best model the response
+variable, or are most informative with respect to the outcome to be
+predicted, etc ...].
+A Bayesian model selection method, the binary outcome stochastic search
+(BOSS) algorithm \cite{russu2012stochastic}, was applied to identify the best set of predictive
+SNPs by repeated sampling in a Markov Chain Monte
+Carlo (MCMC) approach.  
+SNPs were ranked based on their probability of inclusion in the best
+predictive model.
+ 
+In BOSS the relationship between binary observations and predictors is
+described by a Gaussian latent variable model with a probit link function:
 
-naive-Bayes techniques
+\begin{equation}
+P(Y=[0/1]|X)=\phi(X \beta)
+\label{eq:probit}
+\end{equation} 
 
-Bayesian model selection for binary outcomes: unlike regularization, this is a model search
-through the sampling of predictors with MCMC algorithm that builds upon
-the conjugacy structure of data and parameters.
+where $P(Y=[0/1]|X)$ is the probability of having low or high root vigor
+given the SNP genotyps $X$, $\beta$ is a vector of regression
+coefficients, and $\phi$ is the normal cumulative distribution function. 
 
-BOSS: Bayesian stochastic model search for binary outcomes. The
-relationships between binary observed responses and predictors is
-described by a altent variable model with a probit link. Prior distributions assigned
+Priors!!
+
+Prior distributions assigned
 to regression coefficients and model size, to specify prior belief on
 model complexity.
 Metropolis-Hastings sampling algorithm (check the Theory that would not die). 
 BOSS extensively explores the model space to identify relevant
 predictors (sort of best model selection).
 
-$Y_i$: vector of $i=1 ... n$ observations; independent Bernoulli trials
-with success probability $\pi_i$. $x_i=(x_{i1}, \ldots, x_{ip})$ vector
-of $p$ predictors associated with response $Y_i$. $\beta$: vector of
-regression coefficients (parameters).
-
-Probit link function $g$:
-
-\begin{equation}
-\pi_{i}=\phi(x_i^T \beta) = \int_{-\infty}^{x_i^T \beta}N(0,1)\mathrm{d}u
-\end{equation} 
   
 $\beta$ is assigned a multivariate Gaussian prior.
+
+[Describe latent variables? See if this is needed for variable selection
+and BOSS algorithm!]
+
+The selection of predictors was performed by introducing a vector of
+indicator variables $\gamma=(\gamma_1, \ldots, \gamma_p)$ such that
+$\gamma=0$ if $\beta=0$ and $\gamma=1$ if $\beta \neq 0$. A predictor
+was included in the model if its regression coefficient was
+not null and the associated indicator variable $\gamma=1$.
+The model space to be searched was therefore given by the $2^p$ possible
+combinations of SNPs (included/excluded).
+
+[How are the $\gamma$ chosen/determined?]
+
+Equation~\ref{eq:threshold} can be re-written as
+$\mathbf{Z=\alpha1+X_{\gamma}\beta_{\gamma}+\epsilon}$ and includes only
+predictors for which $\gamma=1$ ($\alpha$ is the intercept).
+
+
+$\gamma$ obtained through Binary Outcome Stochastic Search (BOSS): a
+sampling scheme from $f(\gamma|Z)$.
+
+
 
 $Z$: latent variables ($Z \sim N(X^T\beta)$).
 The threshold (latent variable) model is summarized in equation~\ref{eq:threshold}
@@ -261,17 +292,6 @@ Y_i = \left\{
  
 Posteriors for $\beta$ through Gibbs sampling (again, see the Theory
 that would not die).
-
-$\gamma=(\gamma_1, \ldots, \gamma_p)$: vector of indicator variables
-($\gamma=0$ if $\beta=0$, $\gamma=1$ if $\beta \neq 0$)
-
-Equation~\ref{eq:threshold} can be re-written as
-$\mathbf{Z=\alpha1+X_{\gamma}\beta_{\gamma}+\epsilon}$ and includes only
-predictors for which $\gamma=1$ ($\alpha$ is the intercept).
-
-
-$\gamma$ obtained through Binary Outcome Stochastic Search (BOSS): a
-sampling scheme from $f(\gamma|Z)$.
 
 \begin{enumerate}
 \item initialize $Z$

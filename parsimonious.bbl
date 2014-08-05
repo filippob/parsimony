@@ -43,6 +43,11 @@ Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., Witten, I.H.:
   The weka data mining software: an update.
 \newblock ACM SIGKDD explorations newsletter \textbf{11}(1), 10--18 (2009)
 
+\bibitem{hastie2009model}
+Hastie, T., Tibshirani, R., Friedman, J.: Model assessment and selection.
+\newblock In: The elements of statistical learning, pp. 219--260. Springer, New
+  York, NY, USA (2009)
+
 \bibitem{heffner2010plant}
 Heffner, E.L., Lorenz, A.J., Jannink, J.L., Sorrells, M.E.: Plant breeding with
   genomic selection: gain per unit time and cost.
@@ -57,6 +62,11 @@ Hofheinz, N., Borchardt, D., Weissleder, K., Frisch, M.: Genome-based
 Jonas, E., de~Koning, D.J.: Does genomic selection have a future in plant
   breeding?
 \newblock Trends in biotechnology \textbf{31}(9), 497--504 (2013)
+
+\bibitem{liu2011multilocus}
+Liu, Z., Shen, Y., Ott, J.: Multilocus association mapping using generalized
+  ridge logistic regression.
+\newblock BMC bioinformatics \textbf{12}(1), 384 (2011)
 
 \bibitem{meuwissen2001prediction}
 Meuwissen, T., Hayes, B., Goddard: Prediction of total genetic value using
@@ -80,12 +90,6 @@ Russu, A., Malovini, A., Puca, A.A., Bellazzi, R.: Stochastic model search with
   binary outcomes for genome-wide association studies.
 \newblock Journal of the American Medical Informatics Association
   \textbf{19}(e1), e13--e20 (2012)
-
-\bibitem{saccomani2009molecular}
-Saccomani, M., Stevanato, P., Trebbi, D., McGrath, J.M., Biancardi, E.:
-  Molecular and morpho-physiological characterization of sea, ruderal and
-  cultivated beets.
-\newblock Euphytica \textbf{169}(1), 19--29 (2009)
 
 \bibitem{stevanato2013high}
 Stevanato, P., Broccanello, C., Biscarini, F., Del~Corvo, M., Sablok, G.,

@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: parsimonious.aux
 The style file: spmpsci.bst
 Database file #1: parsimonious.bib.bib
-You've used 18 entries,
+You've used 19 entries,
             2946 wiz_defined-function locations,
-            723 strings with 8425 characters,
-and the built_in function-call counts, 16698 in all, are:
-= -- 2017
-> -- 416
-< -- 1
-+ -- 255
-- -- 152
-* -- 786
-:= -- 1597
-add.period$ -- 20
-call.type$ -- 18
-change.case$ -- 128
+            731 strings with 8518 characters,
+and the built_in function-call counts, 17539 in all, are:
+= -- 2119
+> -- 423
+< -- 2
++ -- 263
+- -- 154
+* -- 817
+:= -- 1671
+add.period$ -- 22
+call.type$ -- 19
+change.case$ -- 134
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 1865
-empty$ -- 942
-format.name$ -- 168
-if$ -- 3380
+cite$ -- 19
+duplicate$ -- 1964
+empty$ -- 1005
+format.name$ -- 171
+if$ -- 3569
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 215
-newline$ -- 82
-num.names$ -- 36
-pop$ -- 752
+int.to.str$ -- 19
+missing$ -- 224
+newline$ -- 86
+num.names$ -- 38
+pop$ -- 785
 preamble$ -- 1
-purify$ -- 111
+purify$ -- 114
 quote$ -- 0
-skip$ -- 910
+skip$ -- 968
 stack$ -- 0
-substring$ -- 797
-swap$ -- 1646
-text.length$ -- 1
+substring$ -- 839
+swap$ -- 1724
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 76
 warning$ -- 0
-while$ -- 84
-width$ -- 20
-write$ -- 190
+while$ -- 89
+width$ -- 21
+write$ -- 201

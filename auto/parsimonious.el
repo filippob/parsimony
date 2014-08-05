@@ -9,8 +9,13 @@
      "par:boss"
      "eq:probit"
      "eq:threshold"
+     "eq:gammaprior"
+     "eq:gammapost"
      "par:predictor_selection"
+     "eq:logistic"
      "par:estimating_error"
+     "eq:testerr"
+     "eq:cverr"
      "sec:other_ranker"
      "sec:software"
      "sec:results"
@@ -20,9 +25,11 @@
      "fig:ld"
      "fig:rank"
      "sec:conclusions"
-     "tab:error")
+     "tab:error"
+     "tab:rank")
     (TeX-run-style-hooks
      "graphicx"
+     "longtable"
      "latex2e"
      "svjour310"
      "svjour3"

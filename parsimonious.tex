@@ -45,6 +45,7 @@ grestore
 %
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
+\usepackage{longtable}
 \usepackage{graphicx}
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
@@ -57,7 +58,7 @@ grestore
 % \newcommand{}{}
 %
 % Insert the name of "your journal" with
-% \journalname{myjournal}
+% \journalname{Molecular Breeding}
 %
 \begin{document}
 
@@ -77,7 +78,7 @@ grestore
 
 %\authorrunning{Short form of author list} % if too long for running head
 
-\institute{F. Biscarini \at
+\institute{F. Biscarini, N. Nazzicari \at
               Fondazione Parco Tecnologico Padano \\
               %Tel.: +123-45-678910\\
               \email{filippo.biscarini@tecnoparco.org}           %  \\
@@ -86,15 +87,10 @@ grestore
  S. Marini \at
     Dipartimento di Ingegneria Industriale e dell'Informazione \\
     Universit\`{a} di Pavia
-	\and
-	N. Nazzicari \at
-    Fondazione Parco Tecnologico Padano \\
-    %Tel.: +123-45-678910\\
-    \email{nelson.nazzicari@tecnoparco.org}           %  \\
-	\and
-	P. Stevanato \at
-	DAFNE, Universit\`{a} di Padova \\
-        24105 Padova, Italy
+\and
+    P. Stevanato \at
+    DAFNE, Universit\`{a} di Padova \\
+    24105 Padova, Italy
 }
 
 
@@ -241,43 +237,8 @@ where $P(Y=[0/1]|X)$ is the probability of having low or high root vigor
 given the SNP genotyps $X$, $\beta$ is a vector of regression
 coefficients, and $\phi$ is the normal cumulative distribution function. 
 
-Priors!!
-
-Prior distributions assigned
-to regression coefficients and model size, to specify prior belief on
-model complexity.
-Metropolis-Hastings sampling algorithm (check the Theory that would not die). 
-BOSS extensively explores the model space to identify relevant
-predictors (sort of best model selection).
-
-  
-$\beta$ is assigned a multivariate Gaussian prior.
-
-[Describe latent variables? See if this is needed for variable selection
-and BOSS algorithm!]
-
-The selection of predictors was performed by introducing a vector of
-indicator variables $\gamma=(\gamma_1, \ldots, \gamma_p)$ such that
-$\gamma=0$ if $\beta=0$ and $\gamma=1$ if $\beta \neq 0$. A predictor
-was included in the model if its regression coefficient was
-not null and the associated indicator variable $\gamma=1$.
-The model space to be searched was therefore given by the $2^p$ possible
-combinations of SNPs (included/excluded).
-
-[How are the $\gamma$ chosen/determined?]
-
-Equation~\ref{eq:threshold} can be re-written as
-$\mathbf{Z=\alpha1+X_{\gamma}\beta_{\gamma}+\epsilon}$ and includes only
-predictors for which $\gamma=1$ ($\alpha$ is the intercept).
-
-
-$\gamma$ obtained through Binary Outcome Stochastic Search (BOSS): a
-sampling scheme from $f(\gamma|Z)$.
-
-
-
-$Z$: latent variables ($Z \sim N(X^T\beta)$).
-The threshold (latent variable) model is summarized in equation~\ref{eq:threshold}
+The $n$ independent latent variables were normally distributed as $Z_i \sim
+N(X_i^T\beta,1)$ (with $i=1 \ldots n$), and used to model the relationships between SNP genotypes and root vigor:
 
 \begin{equation}
 Y_i = \left\{ 
@@ -289,46 +250,174 @@ Y_i = \left\{
 \quad \mathbf{Z}=\mathbf{X\beta+\epsilon}
 \label{eq:threshold}
 \end{equation}
+
+% Prior distributions assigned
+% to regression coefficients and model size, to specify prior belief on
+% model complexity.
+% Metropolis-Hastings sampling algorithm (check the Theory that would not die). 
+BOSS extensively explores the model space to identify relevant
+predictors, similar to what is done in Best Subset Selection (\cite{hastie2009model}).
+
+%$\beta$ is assigned a multivariate Gaussian prior.
+
+The selection of predictors was performed by introducing a vector of
+indicator variables $\gamma=(\gamma_1, \ldots, \gamma_p)$ such that
+$\gamma_i=0$ if $\beta_i=0$ and $\gamma_i=1$ if $\beta_i \neq 0$. A predictor
+was included in the model if its regression coefficient was
+not null and the associated indicator variable $\gamma=1$.
+The model space to be searched was therefore given by the $2^p$ possible
+combinations of SNPs (either included or excluded). This yielded a vector
+$\beta_{\gamma}$ of size $p_{\gamma}$ with only the coefficients for which $\gamma_i=1$.
+
+The prior for vector $\gamma$ was chosen from the following
+beta-binomial (B) distribution: 
+
+\begin{equation}
+f(\gamma)=\frac{B(p_{\gamma}+a,p-p_{\gamma}+b)}{B(a,b)}
+\label{eq:gammaprior}
+\end{equation}
+
+% \begin{equation}
+% f(\mathbf{Z} | \gamma) = \int f(\mathbf{Z}|\gamma,\alpha,\beta_{\gamma})
+% \end{equation}
+
+with parameters $a$ and $b$ related to model size $p_{\gamma}$.
+
+Knowing that the posterior conditional density for $\gamma$ is
+proportional to its prior and the marginal likelihood of $\mathbf{Z}$,
+the following holds: 
+
+\begin{equation}
+f(\gamma|\mathbf{Z}) \propto f(\gamma) \cdot f(\mathbf{Z}|\gamma)
+\label{eq:gammapost}
+\end{equation}
+
+from which vector $\gamma$ can be sampled.
  
-Posteriors for $\beta$ through Gibbs sampling (again, see the Theory
-that would not die).
+% Equation~\ref{eq:threshold} can be re-written as
+% $\mathbf{Z=\alpha1+X_{\gamma}\beta_{\gamma}+\epsilon}$ and includes only
+% predictors for which $\gamma=1$ ($\alpha$ is the intercept).
+
+
+% $\gamma$ obtained through Binary Outcome Stochastic Search (BOSS): a
+% sampling scheme from $f(\gamma|Z)$.
+
+% Posteriors for $\beta$ through Gibbs sampling (again, see the Theory
+% that would not die).
+
+The BOSS algorithm is summarised below:
 
 \begin{enumerate}
-\item initialize $Z$
-\item sample prior for $\gamma$
-\item sample $f(\beta_{\gamma}|\gamma,\sigma^2)$
-\item sample $f(Z|Y,\beta_{\gamma})$
-\item restart from 2 until $m$ iterations are completed
+\item initialize the latent variables $\mathbf{Z}$;
+\item sample $\gamma$ through a Metropolis-Hastings sampler (check the
+  Theory that would not die) from its conditional posterior distribution
+  in equation~\ref{eq:gammapost};
+\item given $\mathbf{Z}$ and $\gamma$, sample $\beta_{\gamma}$ through
+  standard Bayesian linear regression ($\mathbf{Z}=\mathbf{X_{\gamma}}\beta_{\gamma}+\epsilon$);
+\item given $\beta_{\gamma}$ and $\mathbf{Y}$, sample the vector of latent
+  variables $\mathbf{Z}$ from equation~\ref{eq:threshold};
+\item restart from step 2 until $m=1\,000\,000$ iterations are completed
 \end{enumerate}
 
-The first step in our approach is to rank the SNPs by their informativeness
-on the studied phenotype trait. To do so we used one of the outputs of
-the BOSS algorithm \cite{russu2012stochastic}. This algorithm is designed
-to target binary traits, and performs a 
-a model search by sampling the predictors on the
-basis of a general and efficient Markov Chain
-Monte Carlo (MCMC) technique that exploits the
-conjugacy structure of data and parameters.
+From the $m=1\,000\,000$ MCMC iterations the inclusion probabilities for
+the 175 SNPs were computed and used to rank the predictors.
+A more detailed description of the BOSS algorithm can be found in Russu
+et al. (\cite{russu2012stochastic}).
 
-The relationship between the observed
-responses and the available predictors is described
-by a latent variable model with a probit link. Prior 
-distributions are assigned both to
-the regression coefficients and the model size,
-therefore allowing the user to specify a prior
-belief on the model complexity. 
+% The first step in our approach is to rank the SNPs by their informativeness
+% on the studied phenotype trait. To do so we used one of the outputs of
+% the BOSS algorithm \cite{russu2012stochastic}. This algorithm is designed
+% to target binary traits, and performs a 
+% a model search by sampling the predictors on the
+% basis of a general and efficient Markov Chain
+% Monte Carlo (MCMC) technique that exploits the
+% conjugacy structure of data and parameters.
 
-The algorithm produces a XXX
+% The relationship between the observed
+% responses and the available predictors is described
+% by a latent variable model with a probit link. Prior 
+% distributions are assigned both to
+% the regression coefficients and the model size,
+% therefore allowing the user to specify a prior
+% belief on the model complexity. 
 
 \subsubsection{Selection of predictors and classification method}
 \label{par:predictor_selection}
-We take one predictor out at each iteration
-You put the model formula for ridge logistic regression
+
+SNPs were selected based on the BOSS rank (see section~\ref{par:boss})
+by progressively removing one SNP at a time. The full set of 175 SNPs
+was used at first in the prediction model. Subsequently, the $m^{th}$ least
+relevant SNP (from the BOSS rank) was removed each time, and the
+resulting $175-m$ SNPs model was fitted. As a result of this, 175
+different predictive models (from 175 to 1 predictor) were fitted.
+
+With each set of SNP, a logistic regression model for binary outcomes
+was used to classify observations into low and high root vigor based on
+the SNP genotypes. The probability having high root vigor ($P(Y=1|X)=p(x)$) was modeled as a linear
+combination of the predictors (SNPs) through a \emph{logit}
+link-function in a generalised linear model:
+
+\begin{equation} \label{eq:logistic}
+logit(p(x_i)) = log \left ( \frac{p(x_i)}{1-p(x_i)} \right ) = \mu +
+\sum_{j=1}^m z_{ij} SNP_j
+\end{equation}
+ 
+where $p(x_i)$ is the $P(Y=1|X)$ for individual $i$ with vector of
+predictors $x_i$; $SNP_j$ is the effect of the $j_{th}$ marker; $z_{ij}$
+is the genotype of individual $i$ at locus $j$ (0, 1 or 2 for AA, AB and
+BB genotypes).
+Equation~\ref{eq:logistic} returns the odds of $p(x)$ which are
+backtransformed to $P(Y=1|X)$ through the cumulative
+distribution function of the logistic distribution (i.e. the logistic
+function). Individuals with $p(x)>/<0.5$ were classified as high/low
+root vigor individual plants.
+
+Since there were more predictors than observations in
+model~\ref{eq:logistic} ($p>n$), a ridge logistic regression fitting method
+\cite{liu2011multilocus} was adopted, which consisted in maximizing the following
+penalized log-likelihood:
+
+\begin{equation}
+L(\mu,SNP)=\sum_{i=1}^n
+[y_ilog(p_i)+(1-y_i)log(1-p_i)]-\frac{1}{2}\lambda\sum_{j=1}^p SNP_j^2
+\end{equation}
+
+where $\mu$ is the intercept, $SNP$ is the vector of SNP effects (i.e. the
+regression coefficients of SNP genotypes) and $\lambda$ is a tuning
+parameter that was specified through cross-validation and controls the
+amount of penalization.
 
 \subsubsection{Predictive ability}
 \label{par:estimating_error}
-Cross validation: how many times, what fractions. 
-Explanation of error rate and other parameters (ROC?)
+For each set of SNPs (175 to 1), the predictive ability of
+the ridge logistic regression model (equation~\ref{eq:logistic}) was assessed
+through a two-fold cross-validation. 
+The 123 samples were randomly split into a training and testing set of approximately equal
+size. The training set was used to fit the model and estimate SNP
+effects which were then used to predict root vigor in the testing set. This process was repeated 100
+times, each time sampling different training and testing sets.  
+The test error rate in each replicate was computed as:
+
+\begin{equation} \label{eq:testerr}
+ ER_{(n)}=\frac{1}{n} \sum_{i=1}^{n} Err_i
+\end{equation}
+
+where $n$ is the number of observations in the test set and $Err_i=I(y_i \neq \hat{y}_i)$, with $I(\cdot)$ an indicator function
+which returns a value of 1 if the predicted and observed phenotypes are
+different, 0 otherwise. 
+The cross-validation error rate was then estimated averaging the test error
+rate over all $k=100$ replicates:
+
+\begin{equation} \label{eq:cverr}
+CV_{k}=\frac{1}{k} \sum_{i=1}^k ER_i
+\end{equation}
+
+The prediction accuracy was then defined as $1-CV_k$. Besides the total
+error rate, also the false positive (FPR) and false negative (FNR) rates
+were computed. False positives (FP) were defined as true low-root vigor
+plants predicted as high-root vigor, whereas false negatives (FN) were
+defined as true low-root vigor plants predicted as high-root vigor.
+Then, $FPR=\sfrac{FP}{}$ FPR was defined as the 
 
 \subsection{Comparison with another method to rank predictors}
 \label{sec:other_ranker}
@@ -343,7 +432,8 @@ R \cite{r2008manual}, weka \cite{hall2009weka}, perl.
 
 \section{Results}
 \label{sec:results}
-Supplementary table with BOSS rank of SNPs. A few comments on the most
+Supplementary table with BOSS rank of SNPs (Table~\ref{tab:rank}: use
+SNP name instead of order, add scaffold and chromosome). A few comments on the most
 important SNPs (which ones, on which chromosomes, how many per
 chromosome ...).
 
@@ -408,7 +498,7 @@ development of a custom-chip?)
 
 \subsection{Relative performance of rankers}
 why using Pvalues and not other standard rankers (e.g. backward stepwise
-selection)? Because of the specific nature of the problem
+selection)? Because of the specific nature of the problem. ROC and AUC?
 
 Comparison of rankers: spearman correlation + plot (ranker1 vs ranker2).
 
@@ -544,6 +634,19 @@ Reintegration Grant ``NEUTRADAPT''.
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
+
+\begin{longtable}{rc}
+\caption{SNP rank and inclusion probability from BOSS}
+\label{tab:rank}\\
+\hline
+ SNP & probability \\ 
+  \hline
+ 94 & 0.59 \\ 
+  161 & 0.24 \\ 
+  108 & 0.19 \\ 
+   35 & 0.17 \\ 
+  \hline
+\end{longtable}
 
 
 % BibTeX users please use one of

@@ -29,6 +29,7 @@
      "tab:rank")
     (TeX-run-style-hooks
      "graphicx"
+     "xfrac"
      "longtable"
      "latex2e"
      "svjour310"

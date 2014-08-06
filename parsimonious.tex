@@ -46,6 +46,7 @@ grestore
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
 \usepackage{longtable}
+\usepackage{xfrac}
 \usepackage{graphicx}
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
@@ -417,18 +418,45 @@ error rate, also the false positive (FPR) and false negative (FNR) rates
 were computed. False positives (FP) were defined as true low-root vigor
 plants predicted as high-root vigor, whereas false negatives (FN) were
 defined as true low-root vigor plants predicted as high-root vigor.
-Then, $FPR=\sfrac{FP}{}$ FPR was defined as the 
+Then, $FPR=\sfrac{FP}{N}$ and $FNR=\sfrac{FN}{P}$, where $N$ and $P$ are
+the total number of true negative (low-root vigor) and true positive
+(high-root vigor) samples.
 
 \subsection{Comparison with another method to rank predictors}
 \label{sec:other_ranker}
-Another ranker: why use one, and its description.
-P value and SNP effect (as it is done in GWAS)
+The BOSS algorithm yielded a rank of the SNPs based on their probability
+of inclusion in the best predictive model. SNPs could be ranked also
+based on different metrics. For instance, the relative effect on the
+trait under analysis could be chosen as an indirect measure of the
+predictive importance of the SNPs.
 
-SNP variance \cite{gianola2009additive}
+A logistic model of the form $logit(p_i)=\mu+SNP_m$ ($i=1,\ldots,123$
+plants; $m=1,\ldots, 175$ SNPs) was fit one SNP
+at a time in order to estimate marker effects.
+From estimated marker effects and allele frequencies, the additive
+genetic variance at each SNP locus was estimated as:
+
+\begin{equation}
+V_A=2pqa^2
+\end{equation}
+
+where $p$ and $q$ are the frequencies of the two alleles in the
+population and $a$ is the marker additive effect
+(\cite{gianola2009additive}).
+SNPs were then ranked based on decreasing genetic variance and used for
+predictor selection and classification as in
+section~\ref{par:predictor_selection}. Prediction accuracy was estimated
+as in section~\ref{par:estimating_error}.
 
 \subsection{Software}
 \label{sec:software}
-R \cite{r2008manual}, weka \cite{hall2009weka}, perl.
+\emph{Matlab} scripts \cite{MATLAB2010} were used to implement the BOSS
+algorithm for model selection. Classification of observations was done
+with the Java data mining software \emph{Weka 3} \cite{hall2009weka}.
+The open source statistical environment \emph{R} \cite{r2008manual} and
+the open source spreadsheet \emph{Gnumeric 1.12.12}
+(\cite{gnumeric2014}) were used for data manipulation, the creation of
+figures and all other statistical analyses.
 
 \section{Results}
 \label{sec:results}

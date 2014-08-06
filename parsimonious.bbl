@@ -33,6 +33,10 @@ Gianola, D., de~Los~Campos, G., Hill, W.G., Manfredi, E., Fernando, R.:
   Additive genetic variability and the bayesian alphabet.
 \newblock Genetics \textbf{183}(1), 347--363 (2009)
 
+\bibitem{gnumeric2014}
+GNOME-Project: The gnumeric spreadsheet (2014).
+\newblock \urlprefix\url{http://www.gnumeric.org/}
+
 \bibitem{goddard2007genomic}
 Goddard, M., Hayes, B.: Genomic selection.
 \newblock Journal of Animal Breeding and Genetics \textbf{124}(6), 323--330
@@ -67,6 +71,10 @@ Jonas, E., de~Koning, D.J.: Does genomic selection have a future in plant
 Liu, Z., Shen, Y., Ott, J.: Multilocus association mapping using generalized
   ridge logistic regression.
 \newblock BMC bioinformatics \textbf{12}(1), 384 (2011)
+
+\bibitem{MATLAB2010}
+MATLAB: version 7.10.0 (R2010a).
+\newblock The MathWorks Inc., Natick, Massachusetts (2010)
 
 \bibitem{meuwissen2001prediction}
 Meuwissen, T., Hayes, B., Goddard: Prediction of total genetic value using

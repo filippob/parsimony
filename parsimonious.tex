@@ -620,6 +620,7 @@ Reintegration Grant ``NEUTRADAPT''.
 
 % For tables use
 \begin{table}
+\centering
 % table caption is above the table
 \caption{Total error rate (TER), false positive (FPR) and false negative
   (FNR) rates as a function of the number of SNPs ranked according to
@@ -628,54 +629,223 @@ Reintegration Grant ``NEUTRADAPT''.
 % For LaTeX tables use
 \begin{tabular}{cccc}
 \hline\noalign{\smallskip}
+\multicolumn{4}{c}{BOSS}\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
 \# SNPs & TER & FPR & FNR \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-1 & 0.114 & 0.065 & 0.049 \\
-2 & 0.085 & 0.037 & 0.047 \\
-3 & 0.008 &  &  \\
-4 & 0.005 &  &  \\
-5 & 0.003 &  &  \\
-6 & 0.005 &  &  \\
-7 & 0.003 &  &  \\
-8 & 0.002 &  &  \\
-9 & 0.003 &  &  \\
-10 & 0.002 &  &  \\
-11 & 0.002 &  &  \\
-12 & 0.008 &  &  \\
-13 & 0.009 &  &  \\
-14 & 0.016 &  &  \\
-15 & 0.012 &  &  \\
-16 & 0.007 &  &  \\
-17 & 0.005 &  &  \\
-18 & 0.004 &  &  \\
-19 & 0.002 &  &  \\
-20 & 0.001 &  &  \\
-21--30 & 0.002  &  &  \\
-31--40 & 0.001 &  &  \\
-41--50 & 0.004 &  &  \\
-51--60 & 0.002 &  &  \\
-61--70 & 0.003 &  &  \\
-71--80 & 0.004 &  &  \\
-81--90 & 0.002 &  &  \\
-91--100 & 0.001 &  &  \\
-101--175 & 0.001 &  &  \\
+1 & 0.114 & 0.081 & 0.252 \\
+2 & 0.085 & 0.046 & 0.243 \\
+3 & 0.008 & 0.008 &  0.007 \\
+4 & 0.005 & 0.006 &  0.001 \\
+5 & 0.003 & 0.002 &  0.009 \\
+6 & 0.005 & 0.003&  0.015\\
+7 & 0.003 & 0.001 &  0.009\\
+8 & 0.002 & 0.001 &  0.007\\
+9 & 0.003 & 0.000 &  0.014\\
+10 & 0.002 & 0.001 &  0.012\\
+11 & 0.002 & 0.001 &  0.010\\
+12 & 0.008 & 0.001 &  0.038\\
+13 & 0.009 & 0.001 &  0.047\\
+14 & 0.016 & 0.000 &  0.080\\
+15 & 0.012 & 0.000 &  0.060\\
+16 & 0.007 & 0.001 &  0.034\\
+17 & 0.005 & 0.000 &  0.027\\
+18 & 0.004 & 0.001 &  0.021\\
+19 & 0.002 & 0.001 &  0.008\\
+20 & 0.001 & 0.000 &  0.005\\
+21--30 & 0.002  & 0.001 & 0.009\\
+31--40 & 0.001 & 0.000 & 0.004\\
+41--50 & 0.004 & 0.001 & 0.011\\
+51--60 & 0.002 & 0.000 & 0.015\\
+61--70 & 0.003 & 0.000 & 0.029\\
+71--80 & 0.004 & 0.001 & 0.020\\
+81--90 & 0.002 & 0.000 & 0.017\\
+91--100 & 0.001 & 0.000 & 0.012\\
+101--175 & 0.001 &  0.000 & 0.008\\
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
 
-\begin{longtable}{rc}
-\caption{SNP rank and inclusion probability from BOSS}
-\label{tab:rank}\\
+\begin{longtable}{lrlr}
+\caption{SNP rank with chromosome, scaffold and inclusion probability from BOSS\label{tab:rank}}
+\\
+\hline 
+ SNP Name & Chromosome & Scaffold & Inclusion Probability \\ 
+  \hline
+SNP109 &   9 & scaffold00456 & 0.59 \\ 
+  SNP188 & - & contig93422 & 0.24 \\ 
+  SNP128 &   3 & scaffold00113 & 0.19 \\ 
+  SNP128 &   3 & scaffold00113 & 0.19 \\ 
+  SNP41 & - & scaffold01031 & 0.17 \\ 
+  SNP1 &   7 & scaffold00202 & 0.17 \\ 
+  SNP78 &   2 & scaffold00018 & 0.14 \\ 
+  SNP182 &   7 & scaffold00033 & 0.14 \\ 
+  SNP180 &   8 & scaffold00002 & 0.12 \\ 
+  SNP44 & - & scaffold00704 & 0.12 \\ 
+  SNP36 &   9 & scaffold00197 & 0.11 \\ 
+  SNP19 & - & scaffold00437 & 0.10 \\ 
+  SNP142 & - & scaffold00069 & 0.10 \\ 
+  SNP161 &   9 & scaffold00013 & 0.10 \\ 
+  SNP201 & - & scaffold00704 & 0.10 \\ 
+  SNP101 &   3 & scaffold00161 & 0.09 \\ 
+  SNP145 &   9 & scaffold00705 & 0.09 \\ 
+  SNP176 &   8 & scaffold00002 & 0.09 \\ 
+  SNP10 &   9 & scaffold00197 & 0.09 \\ 
+  SNP169 &   9 & scaffold00076 & 0.09 \\ 
+  SNP173 &   9 & scaffold00167 & 0.09 \\ 
+  SNP27 &   9 & scaffold00167 & 0.09 \\ 
+  SNP63 &   9 & scaffold00007 & 0.09 \\ 
+  SNP62 &   2 & scaffold00406 & 0.09 \\ 
+  SNP178 & - & scaffold01031 & 0.09 \\ 
+  SNP166 &   9 & scaffold00007 & 0.09 \\ 
+  SNP107 &   9 & scaffold00013 & 0.09 \\ 
+  SNP43 & - & scaffold00437 & 0.08 \\ 
+  SNP165 &   3 & scaffold00015 & 0.08 \\ 
+  SNP199 &   5 & scaffold00243 & 0.08 \\ 
+  SNP58 &   7 & contig87254 & 0.08 \\ 
+  SNP55 &   6 & scaffold00120 & 0.08 \\ 
+  SNP26 &   2 & scaffold00485 & 0.08 \\ 
+  SNP200 &   8 & scaffold00090 & 0.08 \\ 
+  SNP175 &   9 & scaffold00013 & 0.08 \\ 
+  SNP88 &   7 & scaffold00303 & 0.07 \\ 
+  SNP140 &   2 & scaffold00018 & 0.07 \\ 
+  SNP126 &   2 & scaffold00116 & 0.07 \\ 
+  SNP47 &   4 & scaffold00236 & 0.07 \\ 
+  SNP133 &   9 & scaffold00013 & 0.07 \\ 
+  SNP164 &   4 & scaffold00159 & 0.07 \\ 
+  SNP152 &   5 & scaffold00184 & 0.07 \\ 
+  SNP152 &   5 & scaffold00184 & 0.07 \\ 
+  SNP152 &   5 & scaffold00184 & 0.07 \\ 
+  SNP152 &   5 & scaffold00184 & 0.07 \\ 
+  SNP11 &   4 & scaffold00661 & 0.07 \\ 
+  SNP5 &   4 & scaffold00236 & 0.07 \\ 
+  SNP6 &   9 & scaffold00394 & 0.07 \\ 
+  SNP46 & - & scaffold00704 & 0.07 \\ 
+  SNP114 &   3 & scaffold00863 & 0.07 \\ 
+  SNP113 & - & scaffold00704 & 0.07 \\ 
+  SNP48 &   9 & scaffold00583 & 0.07 \\ 
+  SNP28 &   6 & scaffold00040 & 0.07 \\ 
+  SNP157 &   5 & scaffold00034 & 0.07 \\ 
+  SNP17 &   4 & scaffold00104 & 0.07 \\ 
+  SNP124 &   2 & scaffold00717 & 0.07 \\ 
+  SNP96 &   4 & scaffold00085 & 0.07 \\ 
+  SNP13 &   4 & scaffold00105 & 0.07 \\ 
+  SNP85 &   4 & scaffold00236 & 0.07 \\ 
+  SNP66 &   4 & scaffold00236 & 0.07 \\ 
+  SNP8 &   6 & scaffold00023 & 0.07 \\ 
+  SNP50 &   4 & scaffold00236 & 0.07 \\ 
+  SNP33 &   7 & scaffold00349 & 0.07 \\ 
+  SNP125 &   7 & contig87254 & 0.07 \\ 
+  SNP89 &   7 & scaffold00202 & 0.07 \\ 
+  SNP56 &   7 & scaffold00026 & 0.07 \\ 
+  SNP7 & - & scaffold00437 & 0.06 \\ 
+  SNP187 &   4 & scaffold00236 & 0.06 \\ 
+  SNP81 &   3 & scaffold00125 & 0.06 \\ 
+  SNP45 &   9 & scaffold00013 & 0.06 \\ 
+  SNP45 &   9 & scaffold00013 & 0.06 \\ 
+  SNP52 &   2 & scaffold00010 & 0.06 \\ 
+  SNP196 &   1 & scaffold00139 & 0.06 \\ 
+  SNP102 & - & scaffold00069 & 0.06 \\ 
+  SNP42 & - & scaffold01041 & 0.06 \\ 
+  SNP197 &   9 & scaffold00013 & 0.06 \\ 
+  SNP30 &   8 & scaffold00356 & 0.06 \\ 
+  SNP30 &   8 & scaffold00356 & 0.06 \\ 
+  SNP16 &   9 & scaffold00013 & 0.06 \\ 
+  SNP156 &   9 & scaffold00013 & 0.06 \\ 
+  SNP179 &   3 & scaffold00125 & 0.06 \\ 
+  SNP122 &   7 & scaffold00501 & 0.06 \\ 
+  SNP129 &   3 & scaffold00125 & 0.06 \\ 
+  SNP76 &   7 & scaffold00349 & 0.06 \\ 
+  SNP35 &   5 & scaffold00108 & 0.06 \\ 
+  SNP97 & - & scaffold00248 & 0.06 \\ 
+  SNP153 &   7 & scaffold00407 & 0.06 \\ 
+  SNP117 &   4 & scaffold00474 & 0.06 \\ 
+  SNP84 &   2 & scaffold00717 & 0.06 \\ 
+  SNP131 &   9 & scaffold00013 & 0.06 \\ 
+  SNP192 &   5 & scaffold00252 & 0.06 \\ 
+  SNP79 &   7 & scaffold00293 & 0.06 \\ 
+  SNP93 &   4 & scaffold00105 & 0.06 \\ 
+  SNP150 &   6 & scaffold00141 & 0.06 \\ 
+  SNP160 &   4 & scaffold00195 & 0.06 \\ 
+  SNP137 &   7 & scaffold00522 & 0.06 \\ 
+  SNP148 &   2 & scaffold00717 & 0.06 \\ 
+  SNP191 &   8 & scaffold00152 & 0.06 \\ 
+  SNP203 &   2 & scaffold00717 & 0.05 \\ 
+  SNP194 &   6 & scaffold00336 & 0.05 \\ 
+  SNP183 &   6 & scaffold00336 & 0.05 \\ 
+  SNP68 &   2 & scaffold00256 & 0.05 \\ 
+  SNP40 &   4 & scaffold00147 & 0.05 \\ 
+  SNP144 & - & scaffold00966 & 0.05 \\ 
+  SNP64 &   3 & scaffold00267 & 0.05 \\ 
+  SNP14 &   5 & scaffold00011 & 0.05 \\ 
+  SNP14 &   5 & scaffold00011 & 0.05 \\ 
+  SNP155 &   7 & scaffold00303 & 0.05 \\ 
+  SNP108 &   5 & scaffold00034 & 0.05 \\ 
+  SNP193 &   3 & scaffold00125 & 0.05 \\ 
+  SNP103 &   3 & scaffold00780 & 0.05 \\ 
+  SNP198 &   6 & scaffold00120 & 0.05 \\ 
+  SNP87 &   1 & scaffold00712 & 0.04 \\ 
+  SNP75 &   6 & scaffold00022 & 0.04 \\ 
+  SNP121 &   5 & scaffold00190 & 0.04 \\ 
+  SNP204 &   8 & scaffold00028 & 0.04 \\ 
+  SNP67 &   6 & scaffold00023 & 0.04 \\ 
+  SNP67 &   6 & scaffold00023 & 0.04 \\ 
+  SNP91 &   8 & scaffold00186 & 0.04 \\ 
+  SNP184 &   4 & scaffold00159 & 0.04 \\ 
+  SNP184 &   4 & scaffold00159 & 0.04 \\ 
+  SNP149 &   3 & scaffold00157 & 0.04 \\ 
+  SNP32 &   4 & scaffold00127 & 0.04 \\ 
+  SNP154 &   4 & scaffold00166 & 0.04 \\ 
+  SNP111 &   5 & scaffold00639 & 0.04 \\ 
+  SNP105 &   4 & scaffold00063 & 0.04 \\ 
+  SNP105 &   4 & scaffold00063 & 0.04 \\ 
+  SNP105 &   4 & scaffold00063 & 0.04 \\ 
+  SNP65 &   3 & scaffold00157 & 0.04 \\ 
+  SNP29 &   1 & scaffold00537 & 0.04 \\ 
+  SNP80 &   6 & scaffold00211 & 0.04 \\ 
+  SNP162 &   6 & scaffold00022 & 0.04 \\ 
+  SNP100 &   3 & scaffold00267 & 0.04 \\ 
+  SNP90 &   6 & scaffold00022 & 0.03 \\ 
+  SNP99 & - & scaffold00683 & 0.03 \\ 
+  SNP25 &   7 & scaffold00349 & 0.03 \\ 
+  SNP134 &   6 & scaffold00178 & 0.03 \\ 
+  SNP168 &   4 & scaffold00236 & 0.03 \\ 
+  SNP141 &   3 & scaffold00125 & 0.03 \\ 
+  SNP60 &   4 & scaffold00191 & 0.03 \\ 
+  SNP110 &   7 & scaffold00008 & 0.03 \\ 
+  SNP12 &   1 & scaffold00004 & 0.03 \\ 
+  SNP136 &   5 & scaffold00006 & 0.03 \\ 
+  SNP119 &   4 & scaffold00334 & 0.03 \\ 
+  SNP51 &   7 & scaffold00349 & 0.03 \\ 
+  SNP146 &   4 & scaffold00570 & 0.03 \\ 
+  SNP39 &   6 & scaffold00330 & 0.03 \\ 
+  SNP92 &   7 & scaffold00349 & 0.03 \\ 
+  SNP37 &   3 & scaffold00404 & 0.03 \\ 
+  SNP37 &   3 & scaffold00404 & 0.03 \\ 
+  SNP190 &   8 & scaffold00086 & 0.03 \\ 
+  SNP172 &   7 & scaffold00177 & 0.03 \\ 
+  SNP116 &   5 & scaffold00034 & 0.03 \\ 
+  SNP195 &   6 & scaffold00211 & 0.02 \\ 
+  SNP38 &   4 & scaffold00635 & 0.02 \\ 
+  SNP151 &   4 & scaffold00337 & 0.02 \\ 
+  SNP174 &   4 & scaffold00570 & 0.02 \\ 
+  SNP83 &   1 & scaffold00660 & 0.02 \\ 
+  SNP104 &   8 & scaffold00028 & 0.02 \\ 
+  SNP31 &   9 & scaffold00138 & 0.02 \\ 
+  SNP70 &   4 & scaffold00306 & 0.02 \\ 
+  SNP82 &   4 & scaffold00306 & 0.02 \\ 
+  SNP77 &   5 & scaffold00006 & 0.02 \\ 
+  SNP115 &   7 & scaffold00049 & 0.02 \\ 
+  SNP139 &   3 & scaffold00030 & 0.02 \\ 
+  SNP147 &   4 & scaffold00166 & 0.02 \\ 
+  SNP73 &   1 & scaffold00001 & 0.01 \\ 
+  SNP4 &   1 & scaffold00660 & 0.01 \\ 
+  SNP171 &   4 & scaffold00191 & 0.01 \\ 
+  SNP94 &   7 & scaffold00180 & 0.01 \\ 
+  SNP98 &   1 & scaffold00004 & 0.01 \\ 
+   %\hline
 \hline
- SNP & probability \\ 
-  \hline
- 94 & 0.59 \\ 
-  161 & 0.24 \\ 
-  108 & 0.19 \\ 
-   35 & 0.17 \\ 
-  \hline
 \end{longtable}
-
 
 % BibTeX users please use one of
 %\bibliographystyle{spbasic}      % basic style, author-year citations

@@ -45,14 +45,14 @@ grestore
 %
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
-\usepackage{longtable}
-\usepackage{xfrac}
-\usepackage{graphicx}
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
 % insert here the call for the packages your document requires
 %\usepackage{latexsym}
+\usepackage{longtable}
+\usepackage{xfrac}
+\usepackage{graphicx}
 % etc.
 %
 % please place your own definitions here and don't use \def but
@@ -627,48 +627,50 @@ Reintegration Grant ``NEUTRADAPT''.
   model, for both the BOSS and SNP variance rankings}
 \label{tab:error}       % Give a unique label
 % For LaTeX tables use
-\begin{tabular}{cccc}
+\begin{tabular}{ccccccc}
 \hline\noalign{\smallskip}
-\multicolumn{4}{c}{BOSS}\\
+ & \multicolumn{3}{c}{BOSS} & \multicolumn{3}{c}{SNP Variance}\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-\# SNPs & TER & FPR & FNR \\
+\# SNPs & TER & FPR & FNR & TER & FPR & FNR\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-1 & 0.114 & 0.081 & 0.252 \\
-2 & 0.085 & 0.046 & 0.243 \\
-3 & 0.008 & 0.008 &  0.007 \\
-4 & 0.005 & 0.006 &  0.001 \\
-5 & 0.003 & 0.002 &  0.009 \\
-6 & 0.005 & 0.003&  0.015\\
-7 & 0.003 & 0.001 &  0.009\\
-8 & 0.002 & 0.001 &  0.007\\
-9 & 0.003 & 0.000 &  0.014\\
-10 & 0.002 & 0.001 &  0.012\\
-11 & 0.002 & 0.001 &  0.010\\
-12 & 0.008 & 0.001 &  0.038\\
-13 & 0.009 & 0.001 &  0.047\\
-14 & 0.016 & 0.000 &  0.080\\
-15 & 0.012 & 0.000 &  0.060\\
-16 & 0.007 & 0.001 &  0.034\\
-17 & 0.005 & 0.000 &  0.027\\
-18 & 0.004 & 0.001 &  0.021\\
-19 & 0.002 & 0.001 &  0.008\\
-20 & 0.001 & 0.000 &  0.005\\
-21--30 & 0.002  & 0.001 & 0.009\\
-31--40 & 0.001 & 0.000 & 0.004\\
-41--50 & 0.004 & 0.001 & 0.011\\
-51--60 & 0.002 & 0.000 & 0.015\\
-61--70 & 0.003 & 0.000 & 0.029\\
-71--80 & 0.004 & 0.001 & 0.020\\
-81--90 & 0.002 & 0.000 & 0.017\\
-91--100 & 0.001 & 0.000 & 0.012\\
-101--175 & 0.001 &  0.000 & 0.008\\
+1 & 0.114 & 0.081 & 0.252 & 0.204 & 0.121 & 0.543\\
+2 & 0.085 & 0.046 & 0.243 & 0.089 & 0.005 & 0.428\\
+3 & 0.008 & 0.008 & 0.007 & 0.091 & 0.004 & 0.435\\
+4 & 0.005 & 0.006 & 0.001 & 0.091 & 0.003 & 0.467\\
+5 & 0.003 & 0.002 & 0.009 & 0.014 & 0.001 & 0.072\\
+6 & 0.005 & 0.003 & 0.015 & 0.016 & 0.000 & 0.080\\
+7 & 0.003 & 0.001 & 0.009 & 0.022 & 0.000 & 0.115\\
+8 & 0.002 & 0.001 & 0.007 & 0.017 & 0.000 & 0.089\\
+9 & 0.003 & 0.000 & 0.014 & 0.017 & 0.000 & 0.088\\
+10 & 0.002 & 0.001 &  0.012 & 0.017 & 0.000 & 0.088\\
+11 & 0.002 & 0.001 &  0.010 & 0.020 & 0.001 & 0.103\\
+12 & 0.008 & 0.001 &  0.038 & 0.020 & 0.002 & 0.102\\
+13 & 0.009 & 0.001 &  0.047 & 0.018 & 0.001 & 0.094\\
+14 & 0.016 & 0.000 &  0.080 & 0.022 & 0.002 & 0.112\\
+15 & 0.012 & 0.000 &  0.060 & 0.025 & 0.003 & 0.130\\
+16 & 0.007 & 0.001 &  0.034 & 0.022 & 0.002 & 0.111\\
+17 & 0.005 & 0.000 &  0.027 & 0.022 & 0.001 & 0.114\\
+18 & 0.004 & 0.001 &  0.021 & 0.025 & 0.002 & 0.130\\
+19 & 0.002 & 0.001 &  0.008 & 0.027 & 0.002 & 0.136\\
+20 & 0.001 & 0.000 &  0.005 & 0.022 & 0.001 & 0.112\\
+21--30 & 0.002 & 0.001 & 0.009 & 0.007 & 0.001 & 0.035\\
+31--40 & 0.001 & 0.000 & 0.004 & 0.003 & 0.000 & 0.012\\
+41--50 & 0.004 & 0.001 & 0.011 & 0.004 & 0.000 & 0.017\\
+51--60 & 0.002 & 0.000 & 0.015 & 0.004 & 0.001 & 0.009\\
+61--70 & 0.003 & 0.000 & 0.029 & 0.003 & 0.001 & 0.012\\
+71--80 & 0.004 & 0.001 & 0.020 & 0.003 & 0.001 & 0.014\\
+81--90 & 0.002 & 0.000 & 0.017 & 0.003 & 0.001 & 0.013\\
+91--100 & 0.001 & 0.000 & 0.012 & 0.003 & 0.000 & 0.012\\
+101--175 & 0.001 &  0.000 & 0.008 & 0.002 &  0.001 & 0.009\\
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
 
+
 \begin{longtable}{lrlr}
-\caption{SNP rank with chromosome, scaffold and inclusion probability from BOSS\label{tab:rank}}
-\\
+\caption{SNP rank with chromosome, scaffold and inclusion probability
+  from BOSS}
+\label{tab:rank}\\
 \hline 
  SNP Name & Chromosome & Scaffold & Inclusion Probability \\ 
   \hline
@@ -846,6 +848,7 @@ SNP109 &   9 & scaffold00456 & 0.59 \\
    %\hline
 \hline
 \end{longtable}
+
 
 % BibTeX users please use one of
 %\bibliographystyle{spbasic}      % basic style, author-year citations

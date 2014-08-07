@@ -561,16 +561,58 @@ play an important predictive role.
 
 
 \subsection{Genotyping strategies and applications to breeding}
-Several techology choices are commonly available when genotyping strategies
-must be decided. Assuming knowledge of SNP flanking sequences, we examine
-four options: SNP chips, genotyping by sequencing (GBS), targeted sequencing (TS),
-and a commercial solution, Illumina BeadXpress.
+High density SNP array (SNP chips) are commonly a very good choice in
+terms of analysis cost and result stability and repeatability. They come
+with a cost, though: the development of a new SNP chip is an expensive
+process, both in terms of direct laboratory costs (it requires the
+resequencing of several specimens) and of analysis times. Moreover, a great deal
+of scientifically sound results can be reached without the need to analyze
+tens or even hundreds of thousands of SNP data.
 
+This is the case of the humble \emph{Beta vulgaris}, that only recently
+has seen the publication of the first reference genome \cite{dohm2013genome}
+and for which there are currently no available SNP chips. While the process
+of developing a custom SNP chip for the beet would surely shed light
+on the plant biology, alternative and more easily accessible technologies 
+are available.
 
-Genotyping by sequencing is 
+Assuming the basic knowledge of SNP flanking sequences, an interesting
+option would be the use of genotyping by sequencing (GBS), that allows
+to gain high quality information on a fraction of the genome
+\textcolor{red}{citation needed}. 
 
-genotyping strategies: 
-Costs, possible technologies (gbs, snp chip, macroarrays), implications
+http://www.ncbi.nlm.nih.gov/pubmed/21573248?dopt=Abstract&holding=f1000,f1000m,isrctn
+
+GBS - typically relying on Next Generation Sequencing technologies - 
+requires the construction of libraries aiming to reduce the genome 
+complexity through the use with restriction enzymes (REs). By using 
+methylation-sensitive REs, repetitive regions of genomes can be avoided 
+and lower copy regions targeted with high efficiency.
+GBS can be considered a valid genotyping strategy once the proper library
+are built. Once the process is complete a significant amount of data 
+processing is still required, though, and SNP calling still requires the use
+of a post-resequencing pipeline.
+
+An alternative solution would be targeted resequencing, a technology
+that involves isolation of genomic regions of interest in a sample library, 
+enabling cost-effective and systematic detection of variants \textcolor{red}{citation needed}. 
+Targeted resequencing requires the amplification of as many regions as
+the number of SNPs to be investigated, and \textcolor{red}{XXX}. 
+
+The two presented options use resequencing approach, meaning that many 
+information are produced (and need to be interpreted). In case no
+information is required other than the list of provided SNPs, 
+it is possible to use low density arrays and obtain only
+SNP result. The exact configuration and maximum number of SNPs depends on
+commercially available laboratory equipment and it is bound to change over
+time, but the general idea is that of a very stable, very cheap technology.
+We cite the case of a common and successfull analysis machinery,
+the Illumina BeadXpress, allowing to assemble custom array containing up 
+to 384 SNP probes. This kind of solution is the best choice in case
+the breeder is interested in just a clear and quickly accessible list of SNPs.
+With reference to the presented study, it is easy to imagine a use case when a fraction
+of the array analytical power is dedicated to root vigor prediction, leaving
+also room for other traits analysis.
 
 applications to breeding:
 why is it important root vigor early detection. Other binomial traits (e.g.

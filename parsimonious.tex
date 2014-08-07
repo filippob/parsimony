@@ -414,7 +414,7 @@ CV_{k}=\frac{1}{k} \sum_{i=1}^k ER_i
 \end{equation}
 
 The prediction accuracy was then defined as $1-CV_k$. Besides the total
-error rate, also the false positive (FPR) and false negative (FNR) rates
+error rate (TER), also the false positive (FPR) and false negative (FNR) rates
 were computed. False positives (FP) were defined as true low-root vigor
 plants predicted as high-root vigor, whereas false negatives (FN) were
 defined as true low-root vigor plants predicted as high-root vigor.
@@ -466,7 +466,7 @@ based on their probability of inclusion in the best predictive model over
 $1\,000\,000$ MCMC iterations. The most relevant SNPs were those most often
 included in the predictive model. The first SNP of the ranking (predictor with the highest probability of
 inclusion) was \emph{SNP109} on scaffold00456 on chromosome 9: this SNP was therefore
-included in all 175 SNP subsets (from all 175 SNPs to just one single
+included in all 175 SNP subsets (from 175 SNPs to just one single
 SNP) used for classification. Of the top 20 SNPs, 6 were on chromosome
 9, 2 each on chromosomes 3, 7 and 8, and 1 on chromosome 2 of the sugar
 beet genome. Seven of the top 20 SNPs were not mapped to any chromosome. 
@@ -475,27 +475,16 @@ chromosome 1, 3 on chromosome 7, 1 on chromosomes 3, 5, 6 and 9; three
 were unmapped. Chromosome and scaffold information for each ranked SNP
 can be found in the supplementary table S1.
   
-Figure~\ref{fig:accuracy} shows the accuracy of prediction as a function of the number of
+Figure~\ref{fig:accuracy} shows the accuracy of prediction (1 - test error) as a function of the number of
 SNPs used for classification based on both the BOSS (blue line) and
-SNP-variance (red line) rankings. The prediction accuracy of classifying
-individuals as high- or low-root vigor was defined as $1 -
-\overline{test\_error\_rate}$ from equation~\ref{eq:cverr}.
-
-
-improve plot: no need to go down to 0.0 in
-the y-axis; legend names and position; color of the lines? The ``bump''
-at around 20-30 SNPs is not visible]
-
-Table~\ref{tab:error}: TER, FPR, FNR for the first 30/35 SNPs + average for the
-rest of the SNP (error close to $0$). BOSS + GWAS (6 columns)
-
-
-Probability of assignment as a function of predictors:
-Figure~\ref{fig:probability}. Better a table? Maybe in discussion?
-
-From ROC curves only the AUC. No plot, use AUC as result in the text (e.g.
-comparison between ranker: overall average AUC, average AUC per \# SNPs
-+ std). Table?
+SNP-variance (red line) rankings. Prediction accuracy was close to 1
+(0.997 or $99.7\%$) down to approximately 30 SNPs in the classifier. When fewer than 30 SNPs
+were used to classify observations, the prediction accuracy became less
+stable, and dropped to a minimum of 0.886 ($88.6\%$) and $0.797$
+($79.7\%$) with the BOSS and SNP-variance ranking, respectively.
+Table~\ref{tab:error} reports the total (TER), false positive (FPR) and false
+negative (FNR) test error rates for all subsets of SNPs (from 175 to 1)
+used for classification. 
 
 % For one-column wide figures use
 \begin{figure}
@@ -520,6 +509,7 @@ comparison between ranker: overall average AUC, average AUC per \# SNPs
 \section{Discussion}
 \label{sec:discussion}
 General overview
+Overall, very few misclassifications were observed
 why error rates are not evenly distributed?
 Reminder: it works very well because of LD and H2
 
@@ -543,6 +533,9 @@ development of a custom-chip?)
 \subsection{Relative performance of rankers}
 why using Pvalues and not other standard rankers (e.g. backward stepwise
 selection)? Because of the specific nature of the problem. ROC and AUC?
+From ROC curves only the AUC. No plot, use AUC as result in the text (e.g.
+comparison between ranker: overall average AUC, average AUC per \# SNPs
++ std). Table?
 
 Comparison of rankers: spearman correlation + plot (ranker1 vs ranker2).
 
@@ -556,7 +549,11 @@ rank position of relevant SNPs}
 \end{figure}
 
 
-\subsection{SNP effects [alternative: LD and probabilities]}
+\subsection{Linklage disequilibrium and probability of assignment}
+Probability of assignment as a function of predictors:
+Figure~\ref{fig:probability}. Better a table? Maybe in discussion?
+
+
 Manhattan plot with BOSS weights and weights from the other articles,
 somehow compared (same chart? two charts? only ten best?).
 
@@ -575,6 +572,7 @@ whereas smaller peaks correspond to a cluster of SNPs in LD which
 individually account for a smaller part of the variatino, but together
 play an important predictive role. 
 
+\subsection{Predictive SNPs}
 
 \subsection{Genotyping strategies and applications to breeding}
 High density SNP array (SNP chips) are commonly a very good choice in
@@ -594,10 +592,9 @@ are available.
 
 Assuming the basic knowledge of SNP flanking sequences, an interesting
 option would be the use of genotyping by sequencing (GBS), that allows
-to gain high quality information on a fraction of the genome
-\textcolor{red}{citation needed}. 
+to gain high quality information on a fraction of the genome (citation needed). 
 
-http://www.ncbi.nlm.nih.gov/pubmed/21573248?dopt=Abstract&holding=f1000,f1000m,isrctn
+http://www.ncbi.nlm.nih.gov/pubmed/21573248?dopt=Abstract\&holding=f1000,f1000m,isrctn
 
 GBS - typically relying on Next Generation Sequencing technologies - 
 requires the construction of libraries aiming to reduce the genome 
@@ -611,9 +608,9 @@ of a post-resequencing pipeline.
 
 An alternative solution would be targeted resequencing, a technology
 that involves isolation of genomic regions of interest in a sample library, 
-enabling cost-effective and systematic detection of variants \textcolor{red}{citation needed}. 
+enabling cost-effective and systematic detection of variants (citation needed). 
 Targeted resequencing requires the amplification of as many regions as
-the number of SNPs to be investigated, and \textcolor{red}{XXX}. 
+the number of SNPs to be investigated, and (citation). 
 
 The two presented options use resequencing approach, meaning that many 
 information are produced (and need to be interpreted). In case no

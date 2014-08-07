@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  6 AUG 2014 12:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  6 AUG 2014 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,8 +518,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <4.89995> on input line 421.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <3.49998> on input line 421.
- [5] [6]
-<accuracy.pdf, id=34, 785.93625pt x 287.57437pt>
+ [5]
+
+LaTeX Warning: Reference `tab:rank' on page 6 undefined on input line 463.
+
+[6] <accuracy.pdf, id=34, 785.93625pt x 287.57437pt>
 File: accuracy.pdf Graphic file (type pdf)
  <use accuracy.pdf>
 Package pdftex.def Info: accuracy.pdf used on input line 488.
@@ -544,36 +547,39 @@ File: rank.pdf Graphic file (type pdf)
 Package pdftex.def Info: rank.pdf used on input line 536.
 (pdftex.def)             Requested size: 321.09897pt x 117.49377pt.
  [8 <./LD.pdf>]
-[9 <./rank.pdf>] [10] [11] [12] [13] (./parsimonious.bbl [14]) [15]
-(./parsimonious.aux) ) 
+[9 <./rank.pdf>] (./parsimonious.bbl [10]) [11] (./parsimonious.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 8261 strings out of 494277
- 151407 string characters out of 6159531
- 205767 words of memory out of 5000000
- 11425 multiletter control sequences out of 15000+600000
+ 8260 strings out of 494277
+ 151403 string characters out of 6159531
+ 200691 words of memory out of 5000000
+ 11424 multiletter control sequences out of 15000+600000
  20112 words of font info for 68 fonts, out of 8000000 for 9000
  400 hyphenation exceptions out of 8191
- 44i,12n,32p,321b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on parsimonious.pdf (15 pages, 277790 bytes).
+ 44i,12n,32p,321b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on parsimonious.pdf (11 pages, 275003 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
+ 147 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

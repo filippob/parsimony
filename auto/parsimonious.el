@@ -25,8 +25,7 @@
      "fig:ld"
      "fig:rank"
      "sec:conclusions"
-     "tab:error"
-     "tab:rank")
+     "tab:error")
     (TeX-run-style-hooks
      "graphicx"
      "xfrac"

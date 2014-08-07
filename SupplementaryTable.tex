@@ -1,0 +1,221 @@
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+
+\smartqed  % flush right qed marks, e.g. at end of proof
+
+\usepackage{longtable}
+
+\begin{document}
+\journalname{Molecular Breeding}
+
+\title{Developing a parsimonius predictor for binary traits in sugar
+  beet (\emph{Beta vulgaris})
+}
+
+
+\author{Filippo Biscarini         \and
+        Simone Marini \and
+	Piergiorgio Stevanato \and
+	Nelson Nazzicari
+}
+\institute{F. Biscarini, N. Nazzicari \at
+              Fondazione Parco Tecnologico Padano \\
+              %Tel.: +123-45-678910\\
+              \email{filippo.biscarini@tecnoparco.org}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+ \and
+ S. Marini \at
+    Dipartimento di Ingegneria Industriale e dell'Informazione \\
+    Universit\`{a} di Pavia
+\and
+    P. Stevanato \at
+    DAFNE, Universit\`{a} di Padova \\
+    24105 Padova, Italy
+}
+
+
+\maketitle
+
+\begin{longtable}{lrl}
+\caption{SNP rank from the BOSS model selection algorithm. The chromosome and scaffold on which the SNPs are located are also reported ("-" indicates unknown chromosome or scaffold). SNPs were aligned on the Ref0.9 assembly of \emph{B. vulgaris} genome\label{tab:rank}} \\ 
+ SNP Name & Chromosome & Scaffold \\ 
+  \hline
+SNP109 &   9 & scaffold00456 \\ 
+  SNP188 & - & contig93422 \\ 
+  SNP128 &   3 & scaffold00113 \\ 
+  SNP41 & - & scaffold01031 \\ 
+  SNP182 &   7 & scaffold00033 \\ 
+  SNP78 &   2 & scaffold00018 \\ 
+  SNP1 &   7 & scaffold00202 \\ 
+  SNP36 &   9 & scaffold00197 \\ 
+  SNP180 &   8 & scaffold00002 \\ 
+  SNP161 &   9 & scaffold00013 \\ 
+  SNP169 &   9 & scaffold00076 \\ 
+  SNP44 & - & scaffold00704 \\ 
+  SNP19 & - & scaffold00437 \\ 
+  SNP142 & - & scaffold00069 \\ 
+  SNP173 &   9 & scaffold00167 \\ 
+  SNP176 &   8 & scaffold00002 \\ 
+  SNP178 & - & scaffold01031 \\ 
+  SNP101 &   3 & scaffold00161 \\ 
+  SNP175 &   9 & scaffold00013 \\ 
+  SNP181 & - & - \\ 
+  SNP201 & - & scaffold00704 \\ 
+  SNP10 &   9 & scaffold00197 \\ 
+  SNP27 &   9 & scaffold00167 \\ 
+  SNP62 &   2 & scaffold00406 \\ 
+  SNP107 &   9 & scaffold00013 \\ 
+  SNP63 &   9 & scaffold00007 \\ 
+  SNP166 &   9 & scaffold00007 \\ 
+  SNP106 & - & - \\ 
+  SNP200 &   8 & scaffold00090 \\ 
+  SNP187 &   4 & scaffold00236 \\ 
+  SNP145 &   9 & scaffold00705 \\ 
+  SNP43 & - & scaffold00437 \\ 
+  SNP133 &   9 & scaffold00013 \\ 
+  SNP26 &   2 & scaffold00485 \\ 
+  SNP165 &   3 & scaffold00015 \\ 
+  SNP16 &   9 & scaffold00013 \\ 
+  SNP140 &   2 & scaffold00018 \\ 
+  SNP126 &   2 & scaffold00116 \\ 
+  SNP85 &   4 & scaffold00236 \\ 
+  SNP35 &   5 & scaffold00108 \\ 
+  SNP55 &   6 & scaffold00120 \\ 
+  SNP199 &   5 & scaffold00243 \\ 
+  SNP71 & - & - \\ 
+  SNP152 &   5 & scaffold00184 \\ 
+  SNP164 &   4 & scaffold00159 \\ 
+  SNP48 &   9 & scaffold00583 \\ 
+  SNP58 &   7 & contig87254 \\ 
+  SNP28 &   6 & scaffold00040 \\ 
+  SNP3 & - & - \\ 
+  SNP47 &   4 & scaffold00236 \\ 
+  SNP88 &   7 & scaffold00303 \\ 
+  SNP30 &   8 & scaffold00356 \\ 
+  SNP157 &   5 & scaffold00034 \\ 
+  SNP96 &   4 & scaffold00085 \\ 
+  SNP13 &   4 & scaffold00105 \\ 
+  SNP114 &   3 & scaffold00863 \\ 
+  SNP5 &   4 & scaffold00236 \\ 
+  SNP113 & - & scaffold00704 \\ 
+  SNP6 &   9 & scaffold00394 \\ 
+  SNP11 &   4 & scaffold00661 \\ 
+  SNP50 &   4 & scaffold00236 \\ 
+  SNP46 & - & scaffold00704 \\ 
+  SNP150 &   6 & scaffold00141 \\ 
+  SNP179 &   3 & scaffold00125 \\ 
+  SNP21 & - & - \\ 
+  SNP89 &   7 & scaffold00202 \\ 
+  SNP8 &   6 & scaffold00023 \\ 
+  SNP49 & - & - \\ 
+  SNP156 &   9 & scaffold00013 \\ 
+  SNP66 &   4 & scaffold00236 \\ 
+  SNP160 &   4 & scaffold00195 \\ 
+  SNP97 & - & scaffold00248 \\ 
+  SNP125 &   7 & contig87254 \\ 
+  SNP45 &   9 & scaffold00013 \\ 
+  SNP124 &   2 & scaffold00717 \\ 
+  SNP159 & - & - \\ 
+  SNP131 &   9 & scaffold00013 \\ 
+  SNP196 &   1 & scaffold00139 \\ 
+  SNP192 &   5 & scaffold00252 \\ 
+  SNP17 &   4 & scaffold00104 \\ 
+  SNP170 & - & - \\ 
+  SNP158 & - & - \\ 
+  SNP42 & - & scaffold01041 \\ 
+  SNP102 & - & scaffold00069 \\ 
+  SNP197 &   9 & scaffold00013 \\ 
+  SNP93 &   4 & scaffold00105 \\ 
+  SNP81 &   3 & scaffold00125 \\ 
+  SNP56 &   7 & scaffold00026 \\ 
+  SNP191 &   8 & scaffold00152 \\ 
+  SNP52 &   2 & scaffold00010 \\ 
+  SNP153 &   7 & scaffold00407 \\ 
+  SNP7 & - & scaffold00437 \\ 
+  SNP122 &   7 & scaffold00501 \\ 
+  SNP33 &   7 & scaffold00349 \\ 
+  SNP130 & - & - \\ 
+  SNP2 & - & - \\ 
+  SNP76 &   7 & scaffold00349 \\ 
+  SNP84 &   2 & scaffold00717 \\ 
+  SNP129 &   3 & scaffold00125 \\ 
+  SNP203 &   2 & scaffold00717 \\ 
+  SNP121 &   5 & scaffold00190 \\ 
+  SNP79 &   7 & scaffold00293 \\ 
+  SNP40 &   4 & scaffold00147 \\ 
+  SNP193 &   3 & scaffold00125 \\ 
+  SNP117 &   4 & scaffold00474 \\ 
+  SNP149 &   3 & scaffold00157 \\ 
+  SNP137 &   7 & scaffold00522 \\ 
+  SNP68 &   2 & scaffold00256 \\ 
+  SNP155 &   7 & scaffold00303 \\ 
+  SNP204 &   8 & scaffold00028 \\ 
+  SNP183 &   6 & scaffold00336 \\ 
+  SNP154 &   4 & scaffold00166 \\ 
+  SNP64 &   3 & scaffold00267 \\ 
+  SNP198 &   6 & scaffold00120 \\ 
+  SNP148 &   2 & scaffold00717 \\ 
+  SNP194 &   6 & scaffold00336 \\ 
+  SNP103 &   3 & scaffold00780 \\ 
+  SNP108 &   5 & scaffold00034 \\ 
+  SNP14 &   5 & scaffold00011 \\ 
+  SNP144 & - & scaffold00966 \\ 
+  SNP87 &   1 & scaffold00712 \\ 
+  SNP75 &   6 & scaffold00022 \\ 
+  SNP91 &   8 & scaffold00186 \\ 
+  SNP67 &   6 & scaffold00023 \\ 
+  SNP184 &   4 & scaffold00159 \\ 
+  SNP65 &   3 & scaffold00157 \\ 
+  SNP32 &   4 & scaffold00127 \\ 
+  SNP111 &   5 & scaffold00639 \\ 
+  SNP105 &   4 & scaffold00063 \\ 
+  SNP80 &   6 & scaffold00211 \\ 
+  SNP29 &   1 & scaffold00537 \\ 
+  SNP141 &   3 & scaffold00125 \\ 
+  SNP136 &   5 & scaffold00006 \\ 
+  SNP134 &   6 & scaffold00178 \\ 
+  SNP100 &   3 & scaffold00267 \\ 
+  SNP90 &   6 & scaffold00022 \\ 
+  SNP162 &   6 & scaffold00022 \\ 
+  SNP99 & - & scaffold00683 \\ 
+  SNP12 &   1 & scaffold00004 \\ 
+  SNP143 & - & - \\ 
+  SNP25 &   7 & scaffold00349 \\ 
+  SNP110 &   7 & scaffold00008 \\ 
+  SNP39 &   6 & scaffold00330 \\ 
+  SNP168 &   4 & scaffold00236 \\ 
+  SNP119 &   4 & scaffold00334 \\ 
+  SNP72 & - & - \\ 
+  SNP38 &   4 & scaffold00635 \\ 
+  SNP60 &   4 & scaffold00191 \\ 
+  SNP190 &   8 & scaffold00086 \\ 
+  SNP37 &   3 & scaffold00404 \\ 
+  SNP51 &   7 & scaffold00349 \\ 
+  SNP92 &   7 & scaffold00349 \\ 
+  SNP116 &   5 & scaffold00034 \\ 
+  SNP151 &   4 & scaffold00337 \\ 
+  SNP104 &   8 & scaffold00028 \\ 
+  SNP195 &   6 & scaffold00211 \\ 
+  SNP172 &   7 & scaffold00177 \\ 
+  SNP146 &   4 & scaffold00570 \\ 
+  SNP174 &   4 & scaffold00570 \\ 
+  SNP34 & - & - \\ 
+  SNP31 &   9 & scaffold00138 \\ 
+  SNP77 &   5 & scaffold00006 \\ 
+  SNP83 &   1 & scaffold00660 \\ 
+  SNP115 &   7 & scaffold00049 \\ 
+  SNP24 & - & - \\ 
+  SNP70 &   4 & scaffold00306 \\ 
+  SNP82 &   4 & scaffold00306 \\ 
+  SNP139 &   3 & scaffold00030 \\ 
+  SNP73 &   1 & scaffold00001 \\ 
+  SNP185 & - & - \\ 
+  SNP147 &   4 & scaffold00166 \\ 
+  SNP4 &   1 & scaffold00660 \\ 
+  SNP171 &   4 & scaffold00191 \\ 
+  SNP94 &   7 & scaffold00180 \\ 
+  SNP98 &   1 & scaffold00004 \\ 
+  % \hline
+\hline
+\end{longtable}
+
+\end{document}

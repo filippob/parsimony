@@ -417,7 +417,7 @@ The prediction accuracy was then defined as $1-CV_k$. Besides the total
 error rate (TER), also the false positive (FPR) and false negative (FNR) rates
 were computed. False positives (FP) were defined as true low-root vigor
 plants predicted as high-root vigor, whereas false negatives (FN) were
-defined as true low-root vigor plants predicted as high-root vigor.
+defined as true high-root vigor plants predicted as low-root vigor.
 Then, $FPR=\sfrac{FP}{N}$ and $FNR=\sfrac{FN}{P}$, where $N$ and $P$ are
 the total number of true negative (low-root vigor) and true positive
 (high-root vigor) samples.
@@ -485,6 +485,10 @@ stable, and dropped to a minimum of 0.886 ($88.6\%$) and $0.797$
 Table~\ref{tab:error} reports the total (TER), false positive (FPR) and false
 negative (FNR) test error rates for all subsets of SNPs (from 175 to 1)
 used for classification. 
+The average TER over the 175 classifiers was 0.0045 ($0.45\%$) and
+0.0075 ($0.75\%$) with the BOSS and SNP-variance rankings. FPR was on average
+slightly higher than FNR ($0.49\%$ vs $0.43\%$ and $0.74\%$ vs $0.73\%$
+with the two rankings).
 
 % For one-column wide figures use
 \begin{figure}
@@ -498,18 +502,34 @@ used for classification.
 \label{fig:accuracy}       % Give a unique label
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.95\textwidth]{probabilities.pdf}
-\caption{Distribution of $P(Y=1|x)$ as a function of the number of SNPs
-  in the classifier}
-\label{fig:probability} 
-\end{figure}
-
 
 \section{Discussion}
 \label{sec:discussion}
-General overview
-Overall, very few misclassifications were observed
+In this paper a general procedure to reduce the dimension of classifying
+problems has been described. The case of a binary trait (root vigor) in sugar beet
+(\emph{B. vulgaris} was chosen as illustration: however, this procedure
+is in prinicple applicable to any other categorical trait in plants and
+animals of agricultural interest.
+In this work, predictors were first ranked for their predictive
+relevance and then used to assess the predictive performance of
+progressively smaller classifiers constructed by serially removing each
+time the least relevant predictor.
+  
+Overall, very few misclassifications were observed for almost every size
+of the classifier. Starting from about 15-20 SNPs in the model the prediction
+accuracy stabilized over $99\%$. Such low error rate is in accordance
+with previous results published by Biscarini et al.
+(\cite{biscarini2014genome}): these authors found a total error rate of
+$0.073\%$ using all available SNPs in the classification model for root vigor. Such
+good predictive ability was related to the high heritability ($h^2=783$)
+and oligogenic nature of the trait, and to the linkage disequilibrium
+(LD) structure of the markers. Also the slightly higher proportion of
+false positives rather than false negatives is in line with previous
+results. When using all SNP genotypes for classification, $FPR>FNR$ was
+found to be due to the population structure (genetic relatedness between
+)
+
+
 why error rates are not evenly distributed?
 Reminder: it works very well because of LD and H2
 
@@ -518,17 +538,6 @@ with BOSS, but also visible with GWAS. Why there? SNPs with large effect
 on the trait, but low significance? SNPs with large effect but low LD
 (with the QTL)? In the latter case, the marker might sometimes be in the
 opposite phase. Look also at marker frequency.
-
-Based on results, a panel of 30-35-40 SNPs is recommended for accurate
-prediction of root vigor (move to breeding applications? Together with
-development of a custom-chip?)
-
-\begin{figure}
-\includegraphics[width=0.95\textwidth]{LD.pdf}
-\caption{Average linkage disequilibrium (LD) for increasing number of
-  SNPs in thepredictive model}
-\label{fig:ld} 
-\end{figure}
 
 \subsection{Relative performance of rankers}
 why using Pvalues and not other standard rankers (e.g. backward stepwise
@@ -552,6 +561,21 @@ rank position of relevant SNPs}
 \subsection{Linklage disequilibrium and probability of assignment}
 Probability of assignment as a function of predictors:
 Figure~\ref{fig:probability}. Better a table? Maybe in discussion?
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{probabilities.pdf}
+\caption{Distribution of $P(Y=1|x)$ as a function of the number of SNPs
+  in the classifier}
+\label{fig:probability} 
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[width=0.95\textwidth]{LD.pdf}
+\caption{Average linkage disequilibrium (LD) for increasing number of
+  SNPs in thepredictive model}
+\label{fig:ld} 
+\end{figure}
 
 
 Manhattan plot with BOSS weights and weights from the other articles,
@@ -662,8 +686,15 @@ potential and challenges of genomic selection in plant breeding (\cite{jonas2013
 
 \section{Conclusions}
 \label{sec:conclusions}
+This paper showed an approach to the reduction of the dimensionality of
+predcition problems. A parsimonious predictor has the advantages of
+being cheaper, easier to handle and of yielding more interpretable
+results. ...
 
-Concluding remarks. 
+Based on results, a panel of 30-35-40 SNPs is recommended for accurate
+prediction of root vigor (move to breeding applications? Together with
+development of a custom-chip?)
+
 
 
 \begin{acknowledgements}
@@ -678,7 +709,7 @@ Reintegration Grant ``NEUTRADAPT''.
 \centering
 % table caption is above the table
 \caption{Total error rate (TER), false positive (FPR) and false negative
-  (FNR) rates as a function of the number of SNPs incluided in the
+  (FNR) rates as a function of the number of SNPs included in the
   model, for both the BOSS and SNP variance rankings}
 \label{tab:error}       % Give a unique label
 % For LaTeX tables use
@@ -689,8 +720,8 @@ Reintegration Grant ``NEUTRADAPT''.
 \# SNPs & TER & FPR & FNR & TER & FPR & FNR\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 1 & 0.114 & 0.333 & 0.061 & 0.204 & 0.500 & 0.132\\
-2 & 0.085 & 0.192 & 0.059 & 0.089 & 0.002 & 0.111\\
-3 & 0.008 & 0.033 & 0.002 & 0.091 & 0.001 & 0.113\\
+2 & 0.085 & 0.192 & 0.059 & 0.089 & 0.004 & 0.101\\
+3 & 0.008 & 0.033 & 0.002 & 0.091 & 0.005 & 0.103\\
 4 & 0.005 & 0.025 & 0.001 & 0.091 & 0.001 & 0.113\\
 5 & 0.003 & 0.006 & 0.002 & 0.014 & 0.000 & 0.017\\
 6 & 0.005 & 0.011 & 0.004 & 0.016 & 0.001 & 0.019\\
@@ -715,8 +746,8 @@ Reintegration Grant ``NEUTRADAPT''.
 61--70 & 0.003 & 0.001 & 0.007 & 0.003 & 0.003 & 0.002\\
 71--80 & 0.004 & 0.001 & 0.005 & 0.003 & 0.003 & 0.003\\
 81--90 & 0.002 & 0.004 & 0.002 & 0.003 & 0.004 & 0.003\\
-91--100 & 0.001 & 0.001 & 0.001 & 0.003 & 0.003 & 0.002\\
-101--175 & 0.001 &  0.002 & 0.001 & 0.002 &  0.005 & 0.002\\
+91--100 & 0.001 & 0.002 & 0.001 & 0.003 & 0.005 & 0.001\\
+101--175 & 0.001 &  0.003 & 0.001 & 0.002 &  0.005 & 0.001\\
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}

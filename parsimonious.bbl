@@ -28,6 +28,10 @@ Dohm, J.C., Minoche, A.E., Holtgr{\"a}we, D., Capella-Guti{\'e}rrez, S.,
   sugar beet (beta vulgaris).
 \newblock Nature  (2013)
 
+\bibitem{fawcett2004roc}
+Fawcett, T.: Roc graphs: Notes and practical considerations for researchers.
+\newblock Machine learning \textbf{31}, 1--38 (2004)
+
 \bibitem{gianola2009additive}
 Gianola, D., de~Los~Campos, G., Hill, W.G., Manfredi, E., Fernando, R.:
   Additive genetic variability and the bayesian alphabet.

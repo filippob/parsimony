@@ -4,46 +4,46 @@ The top-level auxiliary file: parsimonious.aux
 The style file: spmpsci.bst
 Database file #1: parsimonious.bib.bib
 Warning--entry type for "gnumeric2014" isn't style-file defined
---line 979 of file parsimonious.bib.bib
-You've used 21 entries,
+--line 997 of file parsimonious.bib.bib
+You've used 22 entries,
             2946 wiz_defined-function locations,
-            741 strings with 8679 characters,
-and the built_in function-call counts, 18140 in all, are:
-= -- 2161
-> -- 437
+            747 strings with 8792 characters,
+and the built_in function-call counts, 18830 in all, are:
+= -- 2249
+> -- 444
 < -- 2
-+ -- 270
-- -- 158
-* -- 842
-:= -- 1753
-add.period$ -- 24
-call.type$ -- 21
-change.case$ -- 141
++ -- 276
+- -- 160
+* -- 868
+:= -- 1818
+add.period$ -- 25
+call.type$ -- 22
+change.case$ -- 145
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 2021
-empty$ -- 1076
-format.name$ -- 175
-if$ -- 3702
+cite$ -- 22
+duplicate$ -- 2104
+empty$ -- 1121
+format.name$ -- 177
+if$ -- 3845
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 237
-newline$ -- 94
-num.names$ -- 42
-pop$ -- 817
+int.to.str$ -- 22
+missing$ -- 246
+newline$ -- 98
+num.names$ -- 44
+pop$ -- 842
 preamble$ -- 1
-purify$ -- 120
+purify$ -- 123
 quote$ -- 0
-skip$ -- 987
+skip$ -- 1034
 stack$ -- 0
-substring$ -- 850
-swap$ -- 1748
+substring$ -- 886
+swap$ -- 1817
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
+type$ -- 86
 warning$ -- 0
-while$ -- 93
-width$ -- 23
-write$ -- 219
+while$ -- 98
+width$ -- 24
+write$ -- 229
 (There was 1 warning)

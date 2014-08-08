@@ -513,7 +513,12 @@ animals of agricultural interest.
 In this work, predictors were first ranked for their predictive
 relevance and then used to assess the predictive performance of
 progressively smaller classifiers constructed by serially removing each
-time the least relevant predictor.
+time the least relevant predictor. Alternatively, the two steps could be
+combined into a single one by using a variable selection method like
+backward stepwise selection or Bayesian lasso (\cite{hastie2009model}). 
+
+% why using BOSS and SNP-variance and not other standard procedures (e.g. backward stepwise
+% selection)? Because of the specific nature of the problem (too few errors).
   
 Overall, very few misclassifications were observed for almost every size
 of the classifier. Starting from about 15-20 SNPs in the model the prediction
@@ -521,34 +526,50 @@ accuracy stabilized over $99\%$. Such low error rate is in accordance
 with previous results published by Biscarini et al.
 (\cite{biscarini2014genome}): these authors found a total error rate of
 $0.073\%$ using all available SNPs in the classification model for root vigor. Such
-good predictive ability was related to the high heritability ($h^2=783$)
+good predictive ability was related to the high heritability ($h^2=0.783$)
 and oligogenic nature of the trait, and to the linkage disequilibrium
 (LD) structure of the markers. Also the slightly higher proportion of
 false positives rather than false negatives is in line with previous
 results. When using all SNP genotypes for classification, $FPR>FNR$ was
 found to be due to the population structure (genetic relatedness between
-)
+high- and low-root vigor lines, \cite{biscarini2014genome}). With fewer
+SNPs, sometimes $FNR>FPR$: this might be related to the specific SNPs
+used, which may be in stronger or weaker LD with QTLs and may lead to
+different estimates of genetic relationships between sugar beet lines. 
+A few relevant insights are discussed below.
 
-
-why error rates are not evenly distributed?
-Reminder: it works very well because of LD and H2
-
-Unstable below 30/40 SNPs; little ``bump'' around 20 SNPs: more marked
-with BOSS, but also visible with GWAS. Why there? SNPs with large effect
-on the trait, but low significance? SNPs with large effect but low LD
-(with the QTL)? In the latter case, the marker might sometimes be in the
-opposite phase. Look also at marker frequency.
+% Unstable below 30/40 SNPs; little ``bump'' around 20 SNPs: more marked
+% with BOSS, but also visible with GWAS. Why there? SNPs with large effect
+% on the trait, but low significance? SNPs with large effect but low LD
+% (with the QTL)? In the latter case, the marker might sometimes be in the
+% opposite phase. Look also at marker frequency.
 
 \subsection{Relative performance of rankers}
-why using Pvalues and not other standard rankers (e.g. backward stepwise
-selection)? Because of the specific nature of the problem. ROC and AUC?
-From ROC curves only the AUC. No plot, use AUC as result in the text (e.g.
-comparison between ranker: overall average AUC, average AUC per \# SNPs
-+ std). Table?
+A Bayesian model selection method for binary traits (BOSS) was chosen to
+rank SNPs by importance for later exploring increasingly parsimonious
+predictors. The BOSS ranking was compared to a more intuitive way of
+ranking SNPs by importance in relation to a specific trait: the variance
+proportion of the trait explained by every single SNP.
+With both SNP rankings the results of classification were very similar:
+a very high prediction accuracy was observed for most subsets of SNPs
+included in the model. Only when using few SNPs -$\sim < 30$-
+calssifications based on the BOSS ranking seem to perform better than
+the SNP-variance ranking.
+The classification performance based on the two rankings was compared
+also by looking at ROC curves (\cite{fawcett2004roc}). The two ROC
+curves overlapped substantially and had both a an average AUC (over the
+175 SNP subsets) close to 1 ($0.997 \pm 0.005$ vs $0.996 \pm 0.012$, for
+the BOSS and SNP-variance rankings).
 
-Comparison of rankers: spearman correlation + plot (ranker1 vs ranker2).
-
-Figure~\ref{fig:rank}
+Not only the classification performance of the two rankings was of
+interest, but also the actual rank of the SNP markers when orderd by
+decreasing BOSS inclusion probability or SNP variance. The spearman
+correlation between the relative order of each SNP in the two rankings
+was $0.57$. This is a general measure over all 175 SNPs.
+Figure~\ref{fig:rank} shows the rank difference between the BOSS and
+SNP-variance rankings. The red dotted line is the cumulative variance of
+the rank difference. The top $\sim 30$ SNPs (the most relevant for
+prediction) appear to have a stable rank  
 
 \begin{figure}
 \includegraphics[width=0.95\textwidth]{rank.pdf}
@@ -558,7 +579,7 @@ rank position of relevant SNPs}
 \end{figure}
 
 
-\subsection{Linklage disequilibrium and probability of assignment}
+\subsection{Probability of assignment and linkage disequilibrium}
 Probability of assignment as a function of predictors:
 Figure~\ref{fig:probability}. Better a table? Maybe in discussion?
 
@@ -577,6 +598,9 @@ Figure~\ref{fig:probability}. Better a table? Maybe in discussion?
 \label{fig:ld} 
 \end{figure}
 
+\subsection{Predictive SNPs}
+Frequency of important SNPs per chromosome (mention plot).
+Variance of SNPs (plots?)
 
 Manhattan plot with BOSS weights and weights from the other articles,
 somehow compared (same chart? two charts? only ten best?).
@@ -596,7 +620,6 @@ whereas smaller peaks correspond to a cluster of SNPs in LD which
 individually account for a smaller part of the variatino, but together
 play an important predictive role. 
 
-\subsection{Predictive SNPs}
 
 \subsection{Genotyping strategies and applications to breeding}
 High density SNP array (SNP chips) are commonly a very good choice in

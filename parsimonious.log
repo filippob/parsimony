@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  8 AUG 2014 19:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.31)  19 AUG 2014 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -510,16 +510,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 101.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
-LaTeX Font Info:    Calculating math sizes for size <6.99997> on input line 421
+LaTeX Font Info:    Calculating math sizes for size <6.99997> on input line 419
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.99997> on input line 421.
+(Font)              <6.99997> on input line 419.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.89995> on input line 421.
+(Font)              <4.89995> on input line 419.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <3.49998> on input line 421.
+(Font)              <3.49998> on input line 419.
  [5]
-Overfull \hbox (4.50056pt too wide) in paragraph at lines 463--477
+Overfull \hbox (4.50056pt too wide) in paragraph at lines 460--474
 \OT1/cmr/m/n/10 based on their prob-a-bil-ity of in-clu-sion in the best pre-di
 c-tive model over $1 000 000$
  []
@@ -527,49 +527,44 @@ c-tive model over $1 000 000$
 [6] <accuracy.pdf, id=34, 785.93625pt x 287.57437pt>
 File: accuracy.pdf Graphic file (type pdf)
  <use accuracy.pdf>
-Package pdftex.def Info: accuracy.pdf used on input line 497.
+Package pdftex.def Info: accuracy.pdf used on input line 494.
 (pdftex.def)             Requested size: 321.09897pt x 117.49377pt.
 
 [7 <./accuracy.pdf>] <rank.pdf, id=49, 785.93625pt x 287.57437pt>
 File: rank.pdf Graphic file (type pdf)
 
 <use rank.pdf>
-Package pdftex.def Info: rank.pdf used on input line 575.
+Package pdftex.def Info: rank.pdf used on input line 578.
 (pdftex.def)             Requested size: 321.09897pt x 117.49377pt.
- <probabilities.pdf, id=50, 794.97pt x 614.295pt>
-File: probabilities.pdf Graphic file (type pdf)
 
-<use probabilities.pdf>
-Package pdftex.def Info: probabilities.pdf used on input line 587.
-(pdftex.def)             Requested size: 321.09897pt x 248.12259pt.
- <LD.pdf, id=51, 794.97pt x 614.295pt>
-File: LD.pdf Graphic file (type pdf)
- <use LD.pdf>
-Package pdftex.def Info: LD.pdf used on input line 595.
-(pdftex.def)             Requested size: 321.09897pt x 248.12259pt.
-
-[8]
-Underfull \vbox (badness 2941) has occurred while \output is active []
-
- [9 <./rank.pdf> <./probabilities.pdf>] [10 <./LD.pdf>]
-Overfull \hbox (93.00111pt too wide) in paragraph at lines 644--645
-[]\OT1/cmr/m/n/10 http://www.ncbi.nlm.nih.gov/pubmed/21573248?dopt=Abstract&hol
-ding=f1000,f1000m,isrctn 
- []
-
-[11] (./parsimonious.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12])
+ [8]
+<probabilities.pdf, id=53, 794.97pt x 614.295pt>
+File: probabilities.pdf Graphic file (type pdf)
+ <use probabilities.pdf>
+Package pdftex.def Info: probabilities.pdf used on input line 619.
+(pdftex.def)             Requested size: 321.09897pt x 248.12259pt.
+
+<LD.pdf, id=54, 794.97pt x 614.295pt>
+File: LD.pdf Graphic file (type pdf)
+ <use LD.pdf>
+Package pdftex.def Info: LD.pdf used on input line 628.
+(pdftex.def)             Requested size: 321.09897pt x 248.12259pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./rank.pdf>] [10 <./probabilities.pdf>] (./parsimonious.bbl [11 <./LD.pdf>
+] [12])
 [13] (./parsimonious.aux) ) 
 Here is how much of TeX's memory you used:
- 8260 strings out of 494277
- 151409 string characters out of 6159531
- 200696 words of memory out of 5000000
- 11424 multiletter control sequences out of 15000+600000
+ 8263 strings out of 494277
+ 151460 string characters out of 6159531
+ 201722 words of memory out of 5000000
+ 11427 multiletter control sequences out of 15000+600000
  20112 words of font info for 68 fonts, out of 8000000 for 9000
  400 hyphenation exceptions out of 8191
- 44i,12n,32p,321b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,32p,321b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -586,7 +581,7 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
 s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on parsimonious.pdf (13 pages, 282464 bytes).
+Output written on parsimonious.pdf (13 pages, 281894 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  110 compressed objects within 2 object streams

@@ -20,10 +20,12 @@
      "sec:software"
      "sec:results"
      "fig:accuracy"
-     "fig:probability"
      "sec:discussion"
-     "fig:ld"
+     "sec:performance"
      "fig:rank"
+     "par:probability"
+     "fig:probability"
+     "fig:ld"
      "sec:conclusions"
      "tab:error")
     (TeX-run-style-hooks

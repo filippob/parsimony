@@ -28,6 +28,10 @@ Dohm, J.C., Minoche, A.E., Holtgr{\"a}we, D., Capella-Guti{\'e}rrez, S.,
   sugar beet (beta vulgaris).
 \newblock Nature  (2013)
 
+\bibitem{fawcett2004roc}
+Fawcett, T.: Roc graphs: Notes and practical considerations for researchers.
+\newblock Machine learning \textbf{31}, 1--38 (2004)
+
 \bibitem{gianola2009additive}
 Gianola, D., de~Los~Campos, G., Hill, W.G., Manfredi, E., Fernando, R.:
   Additive genetic variability and the bayesian alphabet.
@@ -61,6 +65,11 @@ Heffner, E.L., Lorenz, A.J., Jannink, J.L., Sorrells, M.E.: Plant breeding with
 Hofheinz, N., Borchardt, D., Weissleder, K., Frisch, M.: Genome-based
   prediction of test cross performance in two subsequent breeding cycles.
 \newblock Theoretical and Applied Genetics \textbf{125}(8), 1639--1645 (2012)
+
+\bibitem{james2013moving}
+James, G., Witten, D., Hastie, T., Tibshirani, R.: Moving beyond linearity.
+\newblock In: An introduction to statistical learning - with applications in R,
+  pp. 208--209. Springer (2013)
 
 \bibitem{jonas2013does}
 Jonas, E., de~Koning, D.J.: Does genomic selection have a future in plant

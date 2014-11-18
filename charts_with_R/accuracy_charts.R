@@ -10,12 +10,12 @@ do_plot = function (){
     xlab='SNPs used', ylab='Prediction accuracy', col=mycols[1], 
     xlim=c(0,180), ylim=c(0.8, 1))
   lines(dat$gwas, col=mycols[2], lwd=line_width)
-  lines(dat$reliefF, col=mycols[3], lwd=line_width)
+  lines(dat$gain_ratio, col=mycols[3], lwd=line_width)
   grid(col='dark grey')
   
   if (do_legend){
     legend(
-      col=mycols, legend=c('BOSS', 'SNP variance', 'reliefF'), 
+      col=mycols, legend=c('BOSS', 'SNP variance', 'gain_ratio'), 
       x='bottomright', inset=c(0.02, 0.04), lwd=line_width)
   }
 }
